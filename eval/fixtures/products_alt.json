@@ -1,0 +1,8 @@
+{
+    "products": [
+        {"name": "Glow Serum Vitamin C", "price": 890, "margin_pct": 70, "audience": "ผู้หญิง 25-40, ผิวหมองคล้ำ, skincare", "channels": ["Meta", "Google"]},
+        {"name": "Hydra Boost Toner", "price": 590, "margin_pct": 68, "audience": "ผิวแห้ง, คนทำงานออฟฟิศ 22-35, ห้องแอร์", "channels": []},
+        {"name": "Lip Tint Velvet", "price": 259, "margin_pct": 80, "audience": "วัยรุ่น 15-24, แต่งหน้า, เทรนด์ TikTok", "channels": ["TikTok"]},
+        {"name": "Collagen Drink Plus", "price": 1590, "margin_pct": 55, "audience": "ผู้หญิง 35-55, ดูแลผิวจากภายใน, สุขภาพ", "channels": ["Meta", "Google"]}
+    ]
+}

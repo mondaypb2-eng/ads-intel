@@ -1,0 +1,642 @@
+{
+    "id": "20261125-222924-361d",
+    "created": "2026-11-25T22:32:34+07:00",
+    "ai_used": true,
+    "model": "Local · qwen3:4b",
+    "settings": {
+        "base_currency": "THB",
+        "target_roas": 3,
+        "breakeven_roas": 1.5,
+        "fx": {
+            "THB": 1,
+            "USD": 34,
+            "EUR": 37,
+            "SGD": 25.5,
+            "JPY": 0.23
+        }
+    },
+    "files": [
+        "meta_ads_export.csv",
+        "google_ads_report.csv",
+        "tiktok_ads.json"
+    ],
+    "mappings": [
+        {
+            "file": "meta_ads_export.csv",
+            "platform": "Meta",
+            "currency": "THB",
+            "source": "dictionary",
+            "map": {
+                "date": "Reporting starts",
+                "campaign_name": "Campaign name",
+                "spend": "Amount spent (THB)",
+                "impressions": "Impressions",
+                "clicks": "Link clicks",
+                "conversions": "Purchases",
+                "revenue": "Purchases conversion value",
+                "currency": "",
+                "frequency": "Frequency"
+            }
+        },
+        {
+            "file": "google_ads_report.csv",
+            "platform": "Google",
+            "currency": "",
+            "source": "dictionary",
+            "map": {
+                "date": "Day",
+                "campaign_name": "Campaign",
+                "spend": "Cost",
+                "impressions": "Impr.",
+                "clicks": "Clicks",
+                "conversions": "Conversions",
+                "revenue": "Conv. value",
+                "currency": "Currency code",
+                "frequency": ""
+            }
+        },
+        {
+            "file": "tiktok_ads.json",
+            "platform": "TikTok",
+            "currency": "",
+            "source": "dictionary",
+            "map": {
+                "date": "stat_time_day",
+                "campaign_name": "campaign_name",
+                "spend": "spend",
+                "impressions": "impressions",
+                "clicks": "clicks",
+                "conversions": "complete_payment",
+                "revenue": "total_complete_payment_rate",
+                "currency": "currency",
+                "frequency": ""
+            }
+        }
+    ],
+    "row_count": 140,
+    "invalid_rows": [],
+    "issues": [],
+    "totals": {
+        "spend": 357256.26,
+        "impressions": 3511424,
+        "clicks": 51217,
+        "conversions": 1632.8,
+        "revenue": 1275482.48,
+        "ctr": 1.4586,
+        "cpc": 6.98,
+        "cpa": 218.8,
+        "roas": 3.5702
+    },
+    "period": [
+        "2026-11-01",
+        "2026-11-14"
+    ],
+    "platforms": [
+        {
+            "platform": "Meta",
+            "spend": 139434.03,
+            "impressions": 1467730,
+            "clicks": 26671,
+            "conversions": 991,
+            "revenue": 814825.09,
+            "ctr": 1.8172,
+            "cpc": 5.23,
+            "cpa": 140.7,
+            "roas": 5.8438
+        },
+        {
+            "platform": "Google",
+            "spend": 111957.24,
+            "impressions": 279274,
+            "clicks": 6621,
+            "conversions": 318.8,
+            "revenue": 249940.12,
+            "ctr": 2.3708,
+            "cpc": 16.91,
+            "cpa": 351.18,
+            "roas": 2.2325
+        },
+        {
+            "platform": "TikTok",
+            "spend": 105864.99,
+            "impressions": 1764420,
+            "clicks": 17925,
+            "conversions": 323,
+            "revenue": 210717.27,
+            "ctr": 1.0159,
+            "cpc": 5.91,
+            "cpa": 327.76,
+            "roas": 1.9904
+        }
+    ],
+    "campaigns": [
+        {
+            "id": "aad120de",
+            "platform": "Meta",
+            "campaign_name": "GlowSerum_Conversion_Broad",
+            "spend": 58328.76,
+            "impressions": 613988,
+            "clicks": 11616,
+            "conversions": 395,
+            "revenue": 351892.77,
+            "ctr": 1.8919,
+            "cpc": 5.02,
+            "cpa": 147.67,
+            "roas": 6.0329,
+            "frequency": 1.73,
+            "days": 14
+        },
+        {
+            "id": "8a8fde93",
+            "platform": "Google",
+            "campaign_name": "PMax - Skincare - All Products",
+            "spend": 57658.22,
+            "impressions": 216122,
+            "clicks": 3026,
+            "conversions": 99.04,
+            "revenue": 71037.9,
+            "ctr": 1.4001,
+            "cpc": 19.05,
+            "cpa": 582.17,
+            "roas": 1.2321,
+            "frequency": null,
+            "days": 14
+        },
+        {
+            "id": "ee9d6555",
+            "platform": "TikTok",
+            "campaign_name": "TT_GlowSerum_VSA_Shop",
+            "spend": 45660.95,
+            "impressions": 761015,
+            "clicks": 7816,
+            "conversions": 151,
+            "revenue": 131870.47,
+            "ctr": 1.027,
+            "cpc": 5.84,
+            "cpa": 302.39,
+            "roas": 2.888,
+            "frequency": null,
+            "days": 14
+        },
+        {
+            "id": "1a90119f",
+            "platform": "Meta",
+            "campaign_name": "SunScreen_Reels_Lookalike",
+            "spend": 42783.72,
+            "impressions": 450356,
+            "clicks": 6799,
+            "conversions": 158,
+            "revenue": 70123.54,
+            "ctr": 1.5097,
+            "cpc": 6.29,
+            "cpa": 270.78,
+            "roas": 1.639,
+            "frequency": 3.68,
+            "days": 14
+        },
+        {
+            "id": "cfbc42cc",
+            "platform": "TikTok",
+            "campaign_name": "TT_SunScreen_SparkAds_GenZ",
+            "spend": 34645.7,
+            "impressions": 577433,
+            "clicks": 7598,
+            "conversions": 172,
+            "revenue": 78846.8,
+            "ctr": 1.3158,
+            "cpc": 4.56,
+            "cpa": 201.43,
+            "roas": 2.2758,
+            "frequency": null,
+            "days": 14
+        },
+        {
+            "id": "a034c177",
+            "platform": "Google",
+            "campaign_name": "Search - Generic - Sunscreen",
+            "spend": 32486.32,
+            "impressions": 41022,
+            "clicks": 1708,
+            "conversions": 53.81,
+            "revenue": 25333.74,
+            "ctr": 4.1636,
+            "cpc": 19.02,
+            "cpa": 603.72,
+            "roas": 0.7798,
+            "frequency": null,
+            "days": 14
+        },
+        {
+            "id": "3bf7af77",
+            "platform": "TikTok",
+            "campaign_name": "TT_AcneGel_Awareness_TopView",
+            "spend": 25558.34,
+            "impressions": 425972,
+            "clicks": 2511,
+            "conversions": 0,
+            "revenue": 0,
+            "ctr": 0.5895,
+            "cpc": 10.18,
+            "cpa": null,
+            "roas": 0,
+            "frequency": null,
+            "days": 14
+        },
+        {
+            "id": "11081fba",
+            "platform": "Google",
+            "campaign_name": "Search - Brand - GlowSerum",
+            "spend": 21812.7,
+            "impressions": 22130,
+            "clicks": 1887,
+            "conversions": 165.95,
+            "revenue": 153568.48,
+            "ctr": 8.5269,
+            "cpc": 11.56,
+            "cpa": 131.44,
+            "roas": 7.0403,
+            "frequency": null,
+            "days": 14
+        },
+        {
+            "id": "ab8a414e",
+            "platform": "Meta",
+            "campaign_name": "GlowSerum_Retarget_30D",
+            "spend": 21333.9,
+            "impressions": 224567,
+            "clicks": 6245,
+            "conversions": 422,
+            "revenue": 386567.77,
+            "ctr": 2.7809,
+            "cpc": 3.42,
+            "cpa": 50.55,
+            "roas": 18.1199,
+            "frequency": 1.73,
+            "days": 14
+        },
+        {
+            "id": "73e95199",
+            "platform": "Meta",
+            "campaign_name": "AcneGel_Engagement_Test",
+            "spend": 16987.65,
+            "impressions": 178819,
+            "clicks": 2011,
+            "conversions": 16,
+            "revenue": 6241.01,
+            "ctr": 1.1246,
+            "cpc": 8.45,
+            "cpa": 1061.73,
+            "roas": 0.3674,
+            "frequency": 1.73,
+            "days": 14
+        }
+    ],
+    "diagnostics": {
+        "median_cpa": 270.78,
+        "summary": "ใช้งบรวม 357,256 ได้รายได้ 1,275,482 (ROAS 3.57) จาก 10 แคมเปญ: ควรขยาย 3, ปรับปรุง 3, หยุด\/ลดงบ 4",
+        "campaigns": {
+            "aad120de": {
+                "id": "aad120de",
+                "status": "green",
+                "action": "scale",
+                "flags": [],
+                "explanation": "ROAS 6.03 สูงกว่าเป้า 3.0 และไม่พบสัญญาณผิดปกติ",
+                "next_steps": [
+                    "เพิ่มงบทีละ 20–30% ทุก 3–4 วัน และเฝ้าดู CPA",
+                    "ขยายกลุ่ม Lookalike \/ Broad จากผู้ซื้อเดิม"
+                ]
+            },
+            "8a8fde93": {
+                "id": "8a8fde93",
+                "status": "red",
+                "action": "pause",
+                "flags": [
+                    {
+                        "code": "cpa_outlier",
+                        "level": "critical",
+                        "text": "CPA 582 สูงกว่ามัธยฐานบัญชี (271) 2.1 เท่า"
+                    }
+                ],
+                "explanation": "ROAS 1.23 ต่ำกว่าจุดคุ้มทุน 1.5 — CPA 582 สูงกว่ามัธยฐานบัญชี (271) 2.1 เท่า — สาเหตุที่น่าจะเป็น: ค่าคลิกสูงจากความแข่งขันสูงทำให้ต้นทุนต่อยอดขายสูงขึ้น",
+                "next_steps": [
+                    "ปรับการแข่งขันประมูลให้ต่ำลงด้วยการตั้งเป้าหมาย CPA แทน",
+                    "เพิ่มคำค้นหาลบเพื่อลดค่าคลิกที่ไม่เกี่ยวข้อง"
+                ],
+                "cause": "ค่าคลิกสูงจากความแข่งขันสูงทำให้ต้นทุนต่อยอดขายสูงขึ้น",
+                "ai": true
+            },
+            "ee9d6555": {
+                "id": "ee9d6555",
+                "status": "yellow",
+                "action": "optimize",
+                "flags": [],
+                "explanation": "ROAS 2.89 อยู่ระหว่างจุดคุ้มทุนกับเป้า หรือมีสัญญาณที่ต้องแก้ — สาเหตุที่น่าจะเป็น: โฆษณาไม่ดึงดูดทำให้ผู้ใช้คลิกแล้วไม่ซื้อ",
+                "next_steps": [
+                    "ปรับเนื้อหาโฆษณาให้เข้ากับกลุ่มเป้าหมายที่ต้องการซื้อ",
+                    "เพิ่มข้อเสนอส่วนลดบนหน้าเว็บเพื่อดึงดูดการซื้อ"
+                ],
+                "cause": "โฆษณาไม่ดึงดูดทำให้ผู้ใช้คลิกแล้วไม่ซื้อ",
+                "ai": true
+            },
+            "1a90119f": {
+                "id": "1a90119f",
+                "status": "yellow",
+                "action": "optimize",
+                "flags": [
+                    {
+                        "code": "cpa_spike",
+                        "level": "warning",
+                        "text": "CPA ช่วงหลังพุ่งจาก 203 เป็น 401 (+98%)"
+                    },
+                    {
+                        "code": "creative_fatigue",
+                        "level": "warning",
+                        "text": "CTR ลดจาก 1.92% เป็น 1.11% (-42%) และความถี่เพิ่มจาก 2.6 เป็น 4.8 — ครีเอทีฟเริ่มล้า"
+                    }
+                ],
+                "explanation": "ROAS 1.64 อยู่ระหว่างจุดคุ้มทุนกับเป้า หรือมีสัญญาณที่ต้องแก้ — CPA ช่วงหลังพุ่งจาก 203 เป็น 401 (+98%); CTR ลดจาก 1.92% เป็น 1.11% (-42%) และความถี่เพิ่มจาก 2.6 เป็น 4.8 — ครีเอทีฟเริ่มล้า — สาเหตุที่น่าจะเป็น: ผู้ใช้เห็นครีเอทีฟซ้ำจนเบื่อทำให้คลิกน้อยลง",
+                "next_steps": [
+                    "เปลี่ยนครีเอทีฟใหม่ทุก 3 วันเพื่อไม่ให้ผู้ใช้เห็นซ้ำ",
+                    "ตั้งค่าจำกัดความถี่การเห็นเพื่อป้องกันการเบื่อ"
+                ],
+                "cause": "ผู้ใช้เห็นครีเอทีฟซ้ำจนเบื่อทำให้คลิกน้อยลง",
+                "ai": true
+            },
+            "cfbc42cc": {
+                "id": "cfbc42cc",
+                "status": "yellow",
+                "action": "optimize",
+                "flags": [],
+                "explanation": "ROAS 2.28 อยู่ระหว่างจุดคุ้มทุนกับเป้า หรือมีสัญญาณที่ต้องแก้ — สาเหตุที่น่าจะเป็น: กลุ่มเป้าหมายไม่ตรงทำให้มูลค่าต่อออเดอร์ต่ำ",
+                "next_steps": [
+                    "ปรับกลุ่มเป้าหมายให้ตรงกับผู้ใช้ที่มีแนวโน้มซื้อ",
+                    "เพิ่มข้อเสนอส่วนลดเฉพาะกลุ่มเป้าหมายที่เลือก"
+                ],
+                "cause": "กลุ่มเป้าหมายไม่ตรงทำให้มูลค่าต่อออเดอร์ต่ำ",
+                "ai": true
+            },
+            "a034c177": {
+                "id": "a034c177",
+                "status": "red",
+                "action": "pause",
+                "flags": [
+                    {
+                        "code": "cpa_outlier",
+                        "level": "critical",
+                        "text": "CPA 604 สูงกว่ามัธยฐานบัญชี (271) 2.2 เท่า"
+                    },
+                    {
+                        "code": "cpa_spike",
+                        "level": "critical",
+                        "text": "CPA ช่วงหลังพุ่งจาก 409 เป็น 1,187 (+190%)"
+                    }
+                ],
+                "explanation": "ROAS 0.78 ต่ำกว่าจุดคุ้มทุน 1.5 — CPA 604 สูงกว่ามัธยฐานบัญชี (271) 2.2 เท่า; CPA ช่วงหลังพุ่งจาก 409 เป็น 1,187 (+190%) — สาเหตุที่น่าจะเป็น: ค่าคลิกสูงจากความแข่งขันสูงทำให้ต้นทุนต่อยอดขายสูงขึ้น",
+                "next_steps": [
+                    "ใส่ negative keywords จากรายงาน search terms และหยุดคีย์เวิร์ดราคาแพงที่ไม่มียอดขาย",
+                    "เปลี่ยนการบิดเป็น target CPA"
+                ],
+                "cause": "ค่าคลิกสูงจากความแข่งขันสูงทำให้ต้นทุนต่อยอดขายสูงขึ้น",
+                "ai": true
+            },
+            "3bf7af77": {
+                "id": "3bf7af77",
+                "status": "red",
+                "action": "pause",
+                "flags": [
+                    {
+                        "code": "no_conversion",
+                        "level": "critical",
+                        "text": "ใช้งบ 25,558 แต่ยังไม่มีคอนเวอร์ชัน"
+                    }
+                ],
+                "explanation": "ROAS 0.00 ต่ำกว่าจุดคุ้มทุน 1.5 — ใช้งบ 25,558 แต่ยังไม่มีคอนเวอร์ชัน — สาเหตุที่น่าจะเป็น: วัตถุประสงค์แคมเปญไม่ใช่การขายทำให้ไม่มีผู้ซื้อ",
+                "next_steps": [
+                    "เปลี่ยนวัตถุประสงค์แคมเปญให้เป็นการขายแทน",
+                    "ย้ายงบไปแคมเปญ TikTok ที่มียอดขาย"
+                ],
+                "cause": "วัตถุประสงค์แคมเปญไม่ใช่การขายทำให้ไม่มีผู้ซื้อ",
+                "ai": true
+            },
+            "11081fba": {
+                "id": "11081fba",
+                "status": "green",
+                "action": "scale",
+                "flags": [],
+                "explanation": "ROAS 7.04 สูงกว่าเป้า 3.0 และไม่พบสัญญาณผิดปกติ",
+                "next_steps": [
+                    "เพิ่มงบทีละ 20–30% ทุก 3–4 วัน และเฝ้าดู CPA",
+                    "ขยายกลุ่ม Lookalike \/ Broad จากผู้ซื้อเดิม"
+                ]
+            },
+            "ab8a414e": {
+                "id": "ab8a414e",
+                "status": "green",
+                "action": "scale",
+                "flags": [],
+                "explanation": "ROAS 18.12 สูงกว่าเป้า 3.0 และไม่พบสัญญาณผิดปกติ",
+                "next_steps": [
+                    "เพิ่มงบทีละ 20–30% ทุก 3–4 วัน และเฝ้าดู CPA",
+                    "ขยายกลุ่ม Lookalike \/ Broad จากผู้ซื้อเดิม"
+                ]
+            },
+            "73e95199": {
+                "id": "73e95199",
+                "status": "red",
+                "action": "pause",
+                "flags": [
+                    {
+                        "code": "cpa_outlier",
+                        "level": "critical",
+                        "text": "CPA 1,062 สูงกว่ามัธยฐานบัญชี (271) 3.9 เท่า"
+                    }
+                ],
+                "explanation": "ROAS 0.37 ต่ำกว่าจุดคุ้มทุน 1.5 — CPA 1,062 สูงกว่ามัธยฐานบัญชี (271) 3.9 เท่า",
+                "next_steps": [
+                    "หยุดหรือลดงบทันที แล้วย้ายงบไปแคมเปญสถานะเขียว",
+                    "ตรวจ tracking\/pixel ก่อนตัดสินใจขั้นสุดท้าย"
+                ]
+            }
+        }
+    },
+    "products": [
+        {
+            "name": "Glow Serum Vitamin C",
+            "price": 890,
+            "margin_pct": 70,
+            "audience": "ผู้หญิง 25-40, ผิวหมองคล้ำ, skincare, beauty",
+            "channels": [
+                "Meta",
+                "Google",
+                "TikTok"
+            ]
+        },
+        {
+            "name": "UV Shield Sunscreen SPF50",
+            "price": 450,
+            "margin_pct": 65,
+            "audience": "วัยรุ่น-วัยทำงาน 18-35, กิจกรรมกลางแจ้ง, ทะเล",
+            "channels": [
+                "Meta",
+                "Google",
+                "TikTok"
+            ]
+        },
+        {
+            "name": "Acne Clear Gel",
+            "price": 390,
+            "margin_pct": 72,
+            "audience": "วัยรุ่น 16-25, ปัญหาสิว",
+            "channels": [
+                "Meta",
+                "TikTok"
+            ]
+        },
+        {
+            "name": "Night Repair Cream",
+            "price": 1290,
+            "margin_pct": 75,
+            "audience": "ผู้หญิง 30-50, ริ้วรอย, anti-aging",
+            "channels": []
+        },
+        {
+            "name": "Gift Set ปีใหม่ (Serum + Sunscreen)",
+            "price": 1190,
+            "margin_pct": 60,
+            "audience": "ซื้อเป็นของขวัญ, ผู้ชายซื้อให้แฟน, เทศกาลปีใหม่",
+            "channels": [
+                "Meta"
+            ]
+        }
+    ],
+    "next_best_action": {
+        "gaps": [
+            {
+                "product": "Acne Clear Gel",
+                "running": [
+                    "Meta",
+                    "TikTok"
+                ],
+                "missing": [
+                    "Google"
+                ]
+            },
+            {
+                "product": "Night Repair Cream",
+                "running": [],
+                "missing": [
+                    "Meta",
+                    "Google",
+                    "TikTok"
+                ]
+            },
+            {
+                "product": "Gift Set ปีใหม่ (Serum + Sunscreen)",
+                "running": [
+                    "Meta"
+                ],
+                "missing": [
+                    "Google",
+                    "TikTok"
+                ]
+            }
+        ],
+        "proposals": [
+            {
+                "product": "Night Repair Cream",
+                "platform": "Meta",
+                "campaign_name": "NEW_Meta_NightRepairCream",
+                "objective": "Sales (Advantage+ Shopping)",
+                "daily_budget": 2550,
+                "audience": {
+                    "age": "30-50",
+                    "gender": "หญิง",
+                    "locations": "ทั่วประเทศไทย",
+                    "interests": [
+                        "ริ้วรอย",
+                        "anti-aging",
+                        "การดูแลผิว"
+                    ],
+                    "exclusions": "ผู้ซื้อ 30 วันล่าสุด"
+                },
+                "headlines": [
+                    "ราคา 1,290 บาท สำหรับผิวที่ต้องการความชุ่มชื้น",
+                    "แก้ริ้วรอยได้ดี ไม่ต้องกังวลเรื่องวัย",
+                    "ของขวัญปีใหม่สำหรับผิวที่ต้องการความใส"
+                ],
+                "rationale": "ยังไม่ได้ยิง Night Repair Cream บน Meta — ทั้งบัญชี Meta ทำ ROAS เฉลี่ย 5.84 (เป้า 3.0)",
+                "priority": "high"
+            },
+            {
+                "product": "Acne Clear Gel",
+                "platform": "Google",
+                "campaign_name": "NEW_Google_AcneClearGel",
+                "objective": "Sales — Search + Performance Max",
+                "daily_budget": 2550,
+                "audience": {
+                    "age": "16-25",
+                    "gender": "ทั้งหมด",
+                    "locations": "ทั่วประเทศไทย",
+                    "interests": [
+                        "ปัญหาสิว",
+                        "การดูแลสิว",
+                        "การใช้ผลิตภัณฑ์สำหรับวัยรุ่น"
+                    ],
+                    "exclusions": "ผู้ซื้อ 30 วันล่าสุด"
+                },
+                "headlines": [
+                    "Acne Clear Gel ราคา 390 บาท",
+                    "ทำความรู้จัก Acne Clear Gel",
+                    "ลูกค้ารีวิว Acne Clear Gel"
+                ],
+                "rationale": "ยังไม่ได้ยิง Acne Clear Gel บน Google — ทั้งบัญชี Google ทำ ROAS เฉลี่ย 2.23 (เป้า 3.0); ช่องทางที่ดีที่สุดคือ Meta ROAS 5.84. แนวครีเอทีฟ: สร้างความเชื่อมั่นด้วยการใช้ผลิตภัณฑ์ที่ออกแบบมาเพื่อแก้ปัญหาสิวให้ผู้ใช้ในวัยรุ่นได้รับผิวที่สะอาดและไม่ต้องกังวลเรื่องสิว",
+                "priority": "medium"
+            },
+            {
+                "product": "Gift Set ปีใหม่ (Serum + Sunscreen)",
+                "platform": "Google",
+                "campaign_name": "NEW_Google_GiftSetปใหมSerumSunscreen",
+                "objective": "Sales — Search + Performance Max",
+                "daily_budget": 2550,
+                "audience": {
+                    "age": "25-44",
+                    "gender": "ชาย",
+                    "locations": "ทั่วประเทศไทย",
+                    "interests": [
+                        "ของขวัญปีใหม่",
+                        "การดูแลผิว",
+                        "การเตรียมตัวสำหรับเทศกาล"
+                    ],
+                    "exclusions": "ผู้ซื้อ 30 วันล่าสุด"
+                },
+                "headlines": [
+                    "Gift Set ปีใหม่ ราคา 1,190 บาท",
+                    "ทำความรู้จัก Gift Set ปีใหม่",
+                    "ลูกค้ารีวิว Gift Set ปีใหม่"
+                ],
+                "rationale": "ยังไม่ได้ยิง Gift Set ปีใหม่ (Serum + Sunscreen) บน Google — ทั้งบัญชี Google ทำ ROAS เฉลี่ย 2.23 (เป้า 3.0); ช่องทางที่ดีที่สุดคือ Meta ROAS 5.84. แนวครีเอทีฟ: สร้างความเชื่อมั่นด้วยการใช้ผลิตภัณฑ์ที่ออกแบบมาเป็นเซตสำหรับของขวัญปีใหม่ ช่วยให้ผู้ชายที่ต้องการของขวัญที่ดีสำหรับแฟนได้รับผิวที่ใสและมีสุขภาพดี",
+                "priority": "medium"
+            }
+        ],
+        "source": "local",
+        "avg_daily_spend": 25518.3
+    },
+    "report": {
+        "mode": "template",
+        "fit": {
+            "w": 1080,
+            "h": 1350,
+            "clipped": [],
+            "tailwind": true,
+            "fits": true
+        },
+        "png": true
+    },
+    "timing": {
+        "normalize": 0.02,
+        "diagnose": 88.73,
+        "next_best_action": 83.63,
+        "report": 17.57,
+        "total": 189.94
+    }
+}

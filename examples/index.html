@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ตัวอย่างผลลัพธ์ · Multi-Channel Ads Intelligence</title><style>:root{--ink:#0f172a;--mute:#64748b;--line:#e2e8f0;--bg:#f8fafc;--card:#fff;--accent:#5b5bd6;--green:#059669;--yellow:#d97706;--red:#e11d48}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"Noto Sans Thai","Leelawadee UI","Segoe UI",Tahoma,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:16px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+header.hero{background:#0f172a;color:#fff;padding:56px 0 64px}
+.eyebrow{letter-spacing:.2em;font-weight:700;color:#a5b4fc;font-size:13px;text-transform:uppercase}
+h1{font-size:40px;line-height:1.2;margin:10px 0 8px}h2{font-size:28px;margin:0 0 6px}h3{font-size:18px;margin:4px 0}
+.lead{color:#cbd5e1;font-size:18px;max-width:760px;margin:0}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:36px}
+.kpi{background:#1e293b;border-radius:16px;padding:18px 20px}.kpi .l{color:#94a3b8;font-size:14px}.kpi .v{font-size:32px;font-weight:700}.kpi .s{color:#94a3b8;font-size:13px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}.meta span{background:#1e293b;border:1px solid #334155;border-radius:99px;padding:3px 12px;font-size:13px;color:#cbd5e1}
+nav.toc{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav.toc .wrap{display:flex;gap:4px;overflow-x:auto;padding:8px 24px}nav.toc a{white-space:nowrap;color:var(--mute);text-decoration:none;padding:6px 12px;border-radius:8px;font-size:14px}nav.toc a:hover{background:#eef2ff;color:var(--accent)}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.step-no{display:inline-block;background:#eef2ff;color:var(--accent);font-weight:700;border-radius:8px;padding:2px 10px;font-size:13px;margin-bottom:8px}
+.mute{color:var(--mute)}.sm{font-size:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px}
+.grid3>*,.grid2>*,.pipe>*,.report>*{min-width:0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+pre{background:#0f172a;color:#e2e8f0;border-radius:10px;padding:12px;font-size:12px;overflow:auto;max-height:240px;margin:12px 0 0;white-space:pre}
+code,.code{font-family:Consolas,"Cascadia Mono",monospace;font-size:13px}.code{color:var(--accent)}
+table{width:100%;border-collapse:collapse;font-size:15px}th{text-align:left;color:var(--mute);font-weight:500;font-size:13px;border-bottom:1px solid var(--line);padding:8px}td{padding:10px 8px;border-bottom:1px solid #f1f5f9;vertical-align:top}.num{text-align:right;white-space:nowrap}th.num{text-align:right}
+.dot{display:inline-block;width:12px;height:12px;border-radius:50%;margin-top:6px}.dot.green{background:var(--green)}.dot.yellow{background:#fbbf24}.dot.red{background:var(--red)}
+.pill{display:inline-block;border-radius:99px;padding:2px 12px;font-size:13px;font-weight:600;white-space:nowrap}.pill.green{background:#ecfdf5;color:var(--green)}.pill.yellow{background:#fffbeb;color:var(--yellow)}.pill.red{background:#fff1f2;color:var(--red)}
+.flags{margin-top:4px}.flag{display:inline-block;font-size:12px;border-radius:6px;padding:0 8px;margin:2px 4px 0 0}.flag.critical{background:#ffe4e6;color:#be123c}.flag.warning{background:#fef3c7;color:#92400e}
+.why{color:var(--mute)}
+.counts{display:flex;gap:12px;margin:20px 0}.counts div{flex:1;border-radius:14px;padding:14px 18px;font-weight:600}.counts b{font-size:28px;display:block}
+.c-green{background:#ecfdf5;color:var(--green)}.c-yellow{background:#fffbeb;color:var(--yellow)}.c-red{background:#fff1f2;color:var(--red)}
+.pipe{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px}.pipe .card{position:relative}.pipe .card:not(:last-child)::after{content:"→";position:absolute;right:-14px;top:40%;color:var(--accent);font-weight:700}
+.pipe .n{font-size:13px;color:var(--accent);font-weight:700}.pipe ul{padding-left:18px;margin:8px 0 0;font-size:14px}
+.tag-ai{display:inline-block;font-size:11px;background:#eef2ff;color:var(--accent);border-radius:6px;padding:0 6px;margin-left:4px}.tag-code{display:inline-block;font-size:11px;background:#f1f5f9;color:#334155;border-radius:6px;padding:0 6px;margin-left:4px}
+.plat{display:grid;grid-template-columns:110px 1fr 90px;gap:12px;align-items:center;padding:10px 0}.pname{font-weight:700;font-size:18px}.pdot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px}
+.bar{height:16px;border-radius:6px;margin:4px 0;position:relative;min-width:4px}.bar span{position:absolute;left:calc(100% + 8px);top:-3px;font-size:13px;color:#475569;white-space:nowrap}.bar.spend{background:#cbd5e1}.bar.rev{background:var(--accent)}.bars{padding-right:110px}
+.proas{text-align:right;font-size:24px;font-weight:700}.proas.good{color:var(--green)}.proas small{display:block;font-size:11px;color:var(--mute);font-weight:400}
+.hl{border-top:4px solid}.hl.yellow{border-top-color:#fbbf24}.hl.red{border-top-color:var(--red)}.hl-tag{font-size:12px;font-weight:700;color:var(--mute);text-transform:uppercase;letter-spacing:.06em}
+.evidence{background:#f8fafc;border-radius:10px;padding:10px 12px;font-weight:600;margin:12px 0}.hl ul{padding-left:18px;margin:6px 0 0}
+.chip{display:inline-block;border:1px solid var(--line);border-radius:99px;padding:0 10px;font-size:13px;margin:0 4px 4px 0}.chip.solid{color:#fff;border:0;font-weight:600}
+.prop-top{display:flex;justify-content:space-between;align-items:center}.prio{font-size:12px;font-weight:700}.prio.high{color:var(--red)}.prio.medium{color:var(--yellow)}.prio.low{color:var(--mute)}
+dl{display:grid;grid-template-columns:96px 1fr;gap:4px 8px;font-size:14px;margin:12px 0}dt{color:var(--mute)}dd{margin:0}.hls{padding-left:18px;margin:4px 0 8px}
+.report{display:grid;grid-template-columns:420px 1fr;gap:32px;align-items:start;margin-top:24px}.report img{width:100%;border-radius:12px;box-shadow:0 20px 50px rgba(15,23,42,.18);border:1px solid var(--line)}
+.files a{display:flex;justify-content:space-between;gap:12px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;text-decoration:none;color:var(--ink);background:#fff;margin-bottom:8px}.files a:hover{border-color:var(--accent)}.files small{color:var(--mute)}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;border-radius:10px;padding:10px 18px;font-weight:600;margin:4px 8px 4px 0}.btn.ghost{background:#fff;color:var(--accent);border:1px solid #c7d2fe}
+footer{padding:32px 0;color:var(--mute);font-size:14px}
+@media (max-width:900px){.kpis,.pipe{grid-template-columns:1fr 1fr}.grid3,.grid2,.report{grid-template-columns:1fr}.pipe .card::after{display:none}h1{font-size:30px}}
+@media print{nav.toc{display:none}section{break-inside:avoid-page}header.hero{-webkit-print-color-adjust:exact;print-color-adjust:exact}}</style></head><body>
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">ตัวอย่างสำหรับนำเสนอ · Ads Intelligence Engine</div>
+  <h1>จากไฟล์โฆษณา 3 แพลตฟอร์ม สู่รายงานพร้อมคำแนะนำในคลิกเดียว</h1>
+  <p class="lead">ตัวอย่างนี้ใช้ข้อมูลจำลองของแบรนด์สกินแคร์ 10 แคมเปญบน Meta, Google และ TikTok ช่วง 1 Nov 2026 – 14 Nov 2026 ระบบรวมข้อมูล ตรวจหาความผิดปกติ แนะนำว่าควรขยาย ปรับ หรือหยุดแคมเปญไหน และเสนอแคมเปญใหม่ที่ควรยิง</p>
+  <div class="kpis">
+    <div class="kpi"><div class="l">งบที่ใช้</div><div class="v">฿357.3K</div><div class="s">3,511,424 impressions</div></div>
+    <div class="kpi"><div class="l">รายได้</div><div class="v">฿1.28M</div><div class="s">1,633 conversions</div></div>
+    <div class="kpi"><div class="l">ROAS</div><div class="v">3.57x</div><div class="s">เป้า 3.0x · คุ้มทุน 1.5x</div></div>
+    <div class="kpi"><div class="l">CPA</div><div class="v">฿219</div><div class="s">CTR 1.46%</div></div>
+  </div>
+  <div class="meta"><span>3 ไฟล์ · 140 แถว</span><span>แถวเสีย 0</span><span>AI: Local · qwen3:4b</span><span>ใช้เวลา 190 วินาที</span><span>สกุลเงินหลัก THB</span></div>
+</div></header>
+<nav class="toc"><div class="wrap"><a href="#input">1 ข้อมูลเข้า</a><a href="#pipeline">2 ขั้นตอน</a><a href="#platforms">3 ภาพรวม</a><a href="#diagnose">4 วินิจฉัย</a><a href="#nba">5 แคมเปญใหม่</a><a href="#report">6 รายงาน</a><a href="#files">ไฟล์ทั้งหมด</a></div></nav>
+
+<section id="input"><div class="wrap">
+  <span class="step-no">1 · ข้อมูลเข้า</span><h2>ไฟล์ดิบจากแต่ละแพลตฟอร์ม รูปแบบไม่เหมือนกันเลย</h2>
+  <p class="mute">ทีมไม่ต้องจัดรูปแบบก่อน อัปโหลดไฟล์ที่ export มาได้ทันที ระบบจับคู่คอลัมน์และแปลงสกุลเงินให้เอง</p>
+  <div class="grid3"><div class="card"><div class="prop-top"><h3><span class="pdot" style="background:#2f6bff"></span>Meta</h3><a class="sm" href="input/meta_ads_export.csv" download>ดาวน์โหลด</a></div><div class="code sm">meta_ads_export.csv</div><p class="sm mute" style="margin:6px 0 0">CSV ภาษาไทย/อังกฤษ มี BOM · สกุลเงิน THB · ช่องว่างเมื่อไม่มียอดขาย</p><pre>&quot;Reporting starts&quot;,&quot;Reporting ends&quot;,&quot;Campaign name&quot;,&quot;Amount spent (THB)&quot;,Impressions,Reach,Frequency,&quot;Link clicks&quot;,&quot;CTR (link click-through rate)&quot;,Purchases,&quot;Purchases conversion value&quot;,&quot;Cost per result&quot;
+2026-11-01,2026-11-01,GlowSerum_Conversion_Broad,4515.50,47532,33951,1.4,857,1.8,26,22779.02,173.67
+2026-11-02,2026-11-02,GlowSerum_Conversion_Broad,4132.97,43505,30003,1.45,879,2.02,33,29133.57,125.24
+2026-11-03,2026-11-03,GlowSerum_Conversion_Broad,3731.28,39277,26184,1.5,697,1.77,22,19019.03,169.6</pre></div><div class="card"><div class="prop-top"><h3><span class="pdot" style="background:#16a34a"></span>Google</h3><a class="sm" href="input/google_ads_report.csv" download>ดาวน์โหลด</a></div><div class="code sm">google_ads_report.csv</div><p class="sm mute" style="margin:6px 0 0">มีแถวหัวรายงานก่อนหัวตาราง · USD · ตัวเลขมีคอมมา · แถว Total ปิดท้าย</p><pre>Campaign report
+&quot;November 1, 2026 - November 14, 2026&quot;
+Day,Campaign,&quot;Campaign status&quot;,&quot;Currency code&quot;,Cost,Impr.,Clicks,CTR,&quot;Avg. CPC&quot;,Conversions,&quot;Conv. value&quot;,&quot;Cost / conv.&quot;
+2026-11-01,&quot;Search - Brand - GlowSerum&quot;,Enabled,USD,47.60,&quot;1,911&quot;,150,7.85%,$0.32,12.43,333.86,3.83
+2026-11-02,&quot;Search - Brand - GlowSerum&quot;,Enabled,USD,50.16,&quot;1,815&quot;,156,8.6%,$0.32,12.56,350.60,3.99</pre></div><div class="card"><div class="prop-top"><h3><span class="pdot" style="background:#111827"></span>TikTok</h3><a class="sm" href="input/tiktok_ads.json" download>ดาวน์โหลด</a></div><div class="code sm">tiktok_ads.json</div><p class="sm mute" style="margin:6px 0 0">JSON จาก API · ตัวเลขเป็นสตริง · ชื่อฟิลด์ไม่เหมือนแพลตฟอร์มอื่น</p><pre>{
+    &quot;code&quot;: 0,
+    &quot;data&quot;: {
+        &quot;list&quot;: [
+            {
+                &quot;dimensions&quot;: {
+                    &quot;campaign_name&quot;: &quot;TT_SunScreen_SparkAds_GenZ&quot;,
+                    &quot;stat_time_day&quot;: &quot;2026-11-01 00:00:00&quot;
+                },
+                &quot;metrics&quot;: {
+                    &quot;spend&quot;: &quot;2770.9&quot;,
+                    &quot;impressions&quot;: &quot;46182&quot;,
+                    &quot;clicks&quot;: &quot;592&quot;,
+                    &quot;ctr&quot;: &quot;1.28&quot;,
+                    &quot;complete_payment&quot;: &quot;16&quot;,
+                    &quot;total_complete_payment_rate&quot;: &quot;7107.84&quot;,
+                    &quot;currency&quot;: &quot;THB&quot;
+                }
+            }
+        ]
+    }
+}</pre></div></div>
+  <div class="card" style="margin-top:16px"><h3>รายการสินค้า (ใช้หาโอกาสยิงแคมเปญใหม่)</h3>
+  <div style="overflow-x:auto"><table><thead><tr><th>สินค้า</th><th class="num">ราคา</th><th>กลุ่มเป้าหมาย</th><th>ช่องทางที่ยิงอยู่</th></tr></thead><tbody><tr><td><b>Glow Serum Vitamin C</b></td><td class="num">฿890</td><td>ผู้หญิง 25-40, ผิวหมองคล้ำ, skincare, beauty</td><td>Meta, Google, TikTok</td></tr><tr><td><b>UV Shield Sunscreen SPF50</b></td><td class="num">฿450</td><td>วัยรุ่น-วัยทำงาน 18-35, กิจกรรมกลางแจ้ง, ทะเล</td><td>Meta, Google, TikTok</td></tr><tr><td><b>Acne Clear Gel</b></td><td class="num">฿390</td><td>วัยรุ่น 16-25, ปัญหาสิว</td><td>Meta, TikTok</td></tr><tr><td><b>Night Repair Cream</b></td><td class="num">฿1,290</td><td>ผู้หญิง 30-50, ริ้วรอย, anti-aging</td><td><span class="mute">—</span></td></tr><tr><td><b>Gift Set ปีใหม่ (Serum + Sunscreen)</b></td><td class="num">฿1,190</td><td>ซื้อเป็นของขวัญ, ผู้ชายซื้อให้แฟน, เทศกาลปีใหม่</td><td>Meta</td></tr></tbody></table></div></div>
+</div></section>
+
+<section id="pipeline"><div class="wrap">
+  <span class="step-no">2 · ขั้นตอนการทำงาน</span><h2>4 ขั้นตอน ตัวเลขทุกตัวคำนวณด้วยโค้ด AI ไม่ได้คิดเลขเอง</h2>
+  <p class="mute">AI ช่วยอธิบายสาเหตุและเขียนข้อเสนอ ส่วน ROAS, CPA และยอดรวมคำนวณใน PHP จากยอดรวมจริงเสมอ จึงตรวจสอบย้อนกลับได้</p>
+  <div class="pipe">
+    <div class="card"><div class="n">ขั้น 1</div><h3>รวมและทำความสะอาด<span class="tag-code">โค้ด</span></h3><ul><li>จับคู่คอลัมน์จากพจนานุกรม (3/3 ไฟล์)</li><li>แปลง USD → THB ที่ 34</li><li>คำนวณ CTR, CPC, CPA, ROAS</li><li>140 แถวผ่าน schema</li></ul></div>
+    <div class="card"><div class="n">ขั้น 2</div><h3>วินิจฉัยความผิดปกติ<span class="tag-code">โค้ด</span><span class="tag-ai">AI</span></h3><ul><li>CPA สูงกว่ามัธยฐาน</li><li>CPA พุ่งช่วงหลัง</li><li>ครีเอทีฟล้า (CTR ลด, ความถี่เพิ่ม)</li><li>ใช้งบแต่ไม่มี conversion</li></ul></div>
+    <div class="card"><div class="n">ขั้น 3</div><h3>Next-Best-Action<span class="tag-code">โค้ด</span><span class="tag-ai">AI</span></h3><ul><li>หาช่องว่าง สินค้า × ช่องทาง</li><li>เสนอแคมเปญใหม่ งบ กลุ่มเป้าหมาย และพาดหัว</li></ul></div>
+    <div class="card"><div class="n">ขั้น 4</div><h3>รายงานภาพ<span class="tag-code">โค้ด</span></h3><ul><li>เทมเพลต 1080×1350 สำหรับโพสต์/ส่งแชต</li><li>ตรวจขนาดด้วย headless Edge แล้วแคปเป็น PNG</li></ul></div>
+  </div>
+  <div class="grid2"><div class="card"><h3>ตัวอย่างการจับคู่คอลัมน์ (Google)</h3><table><tr><td><code>Day</code></td><td>→</td><td><code>date</code></td></tr><tr><td><code>Campaign</code></td><td>→</td><td><code>campaign_name</code></td></tr><tr><td><code>Cost</code></td><td>→</td><td><code>spend</code></td></tr><tr><td><code>Impr.</code></td><td>→</td><td><code>impressions</code></td></tr><tr><td><code>Clicks</code></td><td>→</td><td><code>clicks</code></td></tr><tr><td><code>Conversions</code></td><td>→</td><td><code>conversions</code></td></tr><tr><td><code>Conv. value</code></td><td>→</td><td><code>revenue</code></td></tr></table></div>
+  <div class="card"><h3>เวลาที่ใช้ต่อขั้น (วินาที)</h3><table>
+    <tr><td>รวมและทำความสะอาด</td><td class="num">0.02</td></tr><tr><td>วินิจฉัย</td><td class="num">88.73</td></tr>
+    <tr><td>Next-Best-Action</td><td class="num">83.63</td></tr><tr><td>รายงาน</td><td class="num">17.57</td></tr>
+    <tr><td><b>รวม</b></td><td class="num"><b>189.94</b></td></tr></table>
+    <p class="sm mute">รันด้วย Local · qwen3:4b บนเครื่อง เวลาส่วนใหญ่ใช้ไปกับ AI ถ้าใช้โหมดกฎอย่างเดียวจะเสร็จในไม่กี่วินาที</p></div></div>
+</div></section>
+
+<section id="platforms"><div class="wrap">
+  <span class="step-no">3 · ภาพรวม</span><h2>เปรียบเทียบแพลตฟอร์ม</h2>
+  <p class="mute">ทุกแพลตฟอร์มแปลงเป็น THB แล้ว จึงเทียบกันได้ตรง ๆ</p>
+  <div class="card" style="margin-top:20px"><div class="plat"><div class="pname"><span class="pdot" style="background:#2f6bff"></span>Meta</div><div class="bars"><div class="bar spend" style="width:17.1%"><span>งบ ฿139.4K</span></div><div class="bar rev" style="width:100%"><span>รายได้ ฿814.8K</span></div></div><div class="proas good">5.84x<small>ROAS</small></div></div><div class="plat"><div class="pname"><span class="pdot" style="background:#16a34a"></span>Google</div><div class="bars"><div class="bar spend" style="width:13.7%"><span>งบ ฿112.0K</span></div><div class="bar rev" style="width:30.7%"><span>รายได้ ฿249.9K</span></div></div><div class="proas ">2.23x<small>ROAS</small></div></div><div class="plat"><div class="pname"><span class="pdot" style="background:#111827"></span>TikTok</div><div class="bars"><div class="bar spend" style="width:13%"><span>งบ ฿105.9K</span></div><div class="bar rev" style="width:25.9%"><span>รายได้ ฿210.7K</span></div></div><div class="proas ">1.99x<small>ROAS</small></div></div></div>
+</div></section>
+
+<section id="diagnose"><div class="wrap">
+  <span class="step-no">4 · วินิจฉัย</span><h2>แคมเปญไหนควรขยาย ปรับ หรือหยุด</h2>
+  <div class="counts"><div class="c-green"><b>3</b>ขยายงบ</div><div class="c-yellow"><b>3</b>ปรับปรุง</div><div class="c-red"><b>4</b>หยุด/ลดงบ</div></div>
+  <h3 style="margin-top:28px">สัญญาณที่ระบบจับได้</h3><div class="grid3"><div class="card hl yellow"><div class="hl-tag">ครีเอทีฟล้า</div><h3>SunScreen_Reels_Lookalike</h3><div class="mute sm">Meta</div><p class="evidence">CTR ลดจาก 1.92% เป็น 1.11% (-42%) และความถี่เพิ่มจาก 2.6 เป็น 4.8 — ครีเอทีฟเริ่มล้า</p><p class="sm"><b>สาเหตุที่น่าจะเป็น:</b> ผู้ใช้เห็นครีเอทีฟซ้ำจนเบื่อทำให้คลิกน้อยลง</p><ul class="sm"><li>เปลี่ยนครีเอทีฟใหม่ทุก 3 วันเพื่อไม่ให้ผู้ใช้เห็นซ้ำ</li><li>ตั้งค่าจำกัดความถี่การเห็นเพื่อป้องกันการเบื่อ</li></ul></div><div class="card hl red"><div class="hl-tag">CPA พุ่งช่วงหลัง</div><h3>Search - Generic - Sunscreen</h3><div class="mute sm">Google</div><p class="evidence">CPA ช่วงหลังพุ่งจาก 409 เป็น 1,187 (+190%)</p><p class="sm"><b>สาเหตุที่น่าจะเป็น:</b> ค่าคลิกสูงจากความแข่งขันสูงทำให้ต้นทุนต่อยอดขายสูงขึ้น</p><ul class="sm"><li>ใส่ negative keywords จากรายงาน search terms และหยุดคีย์เวิร์ดราคาแพงที่ไม่มียอดขาย</li><li>เปลี่ยนการบิดเป็น target CPA</li></ul></div><div class="card hl red"><div class="hl-tag">ไม่มี conversion</div><h3>TT_AcneGel_Awareness_TopView</h3><div class="mute sm">TikTok</div><p class="evidence">ใช้งบ 25,558 แต่ยังไม่มีคอนเวอร์ชัน</p><p class="sm"><b>สาเหตุที่น่าจะเป็น:</b> วัตถุประสงค์แคมเปญไม่ใช่การขายทำให้ไม่มีผู้ซื้อ</p><ul class="sm"><li>เปลี่ยนวัตถุประสงค์แคมเปญให้เป็นการขายแทน</li><li>ย้ายงบไปแคมเปญ TikTok ที่มียอดขาย</li></ul></div></div>
+  <div class="card" style="margin-top:24px;overflow-x:auto"><table><thead><tr><th></th><th>แคมเปญ</th><th class="num">งบ</th><th class="num">รายได้</th><th class="num">ROAS</th><th class="num">CPA</th><th>คำแนะนำ</th></tr></thead><tbody><tr><td><span class="dot green"></span></td><td><b>GlowSerum_Conversion_Broad</b><div class="mute sm">Meta</div></td><td class="num">฿58,329</td><td class="num">฿351,893</td><td class="num"><b>6.03x</b></td><td class="num">฿148</td><td><span class="pill green">ขยายงบ</span></td></tr><tr><td><span class="dot red"></span></td><td><b>PMax - Skincare - All Products</b><div class="mute sm">Google</div><div class="flags"><span class="flag critical" title="CPA 582 สูงกว่ามัธยฐานบัญชี (271) 2.1 เท่า">CPA สูงผิดปกติ</span></div><div class="why sm">CPA 582 สูงกว่ามัธยฐานบัญชี (271) 2.1 เท่า</div></td><td class="num">฿57,658</td><td class="num">฿71,038</td><td class="num"><b>1.23x</b></td><td class="num">฿582</td><td><span class="pill red">หยุด/ลดงบ</span></td></tr><tr><td><span class="dot yellow"></span></td><td><b>TT_GlowSerum_VSA_Shop</b><div class="mute sm">TikTok</div></td><td class="num">฿45,661</td><td class="num">฿131,870</td><td class="num"><b>2.89x</b></td><td class="num">฿302</td><td><span class="pill yellow">ปรับปรุง</span></td></tr><tr><td><span class="dot yellow"></span></td><td><b>SunScreen_Reels_Lookalike</b><div class="mute sm">Meta</div><div class="flags"><span class="flag warning" title="CPA ช่วงหลังพุ่งจาก 203 เป็น 401 (+98%)">CPA พุ่งช่วงหลัง</span><span class="flag warning" title="CTR ลดจาก 1.92% เป็น 1.11% (-42%) และความถี่เพิ่มจาก 2.6 เป็น 4.8 — ครีเอทีฟเริ่มล้า">ครีเอทีฟล้า</span></div><div class="why sm">CPA ช่วงหลังพุ่งจาก 203 เป็น 401 (+98%)</div></td><td class="num">฿42,784</td><td class="num">฿70,124</td><td class="num"><b>1.64x</b></td><td class="num">฿271</td><td><span class="pill yellow">ปรับปรุง</span></td></tr><tr><td><span class="dot yellow"></span></td><td><b>TT_SunScreen_SparkAds_GenZ</b><div class="mute sm">TikTok</div></td><td class="num">฿34,646</td><td class="num">฿78,847</td><td class="num"><b>2.28x</b></td><td class="num">฿201</td><td><span class="pill yellow">ปรับปรุง</span></td></tr><tr><td><span class="dot red"></span></td><td><b>Search - Generic - Sunscreen</b><div class="mute sm">Google</div><div class="flags"><span class="flag critical" title="CPA 604 สูงกว่ามัธยฐานบัญชี (271) 2.2 เท่า">CPA สูงผิดปกติ</span><span class="flag critical" title="CPA ช่วงหลังพุ่งจาก 409 เป็น 1,187 (+190%)">CPA พุ่งช่วงหลัง</span></div><div class="why sm">CPA 604 สูงกว่ามัธยฐานบัญชี (271) 2.2 เท่า</div></td><td class="num">฿32,486</td><td class="num">฿25,334</td><td class="num"><b>0.78x</b></td><td class="num">฿604</td><td><span class="pill red">หยุด/ลดงบ</span></td></tr><tr><td><span class="dot red"></span></td><td><b>TT_AcneGel_Awareness_TopView</b><div class="mute sm">TikTok</div><div class="flags"><span class="flag critical" title="ใช้งบ 25,558 แต่ยังไม่มีคอนเวอร์ชัน">ไม่มี conversion</span></div><div class="why sm">ใช้งบ 25,558 แต่ยังไม่มีคอนเวอร์ชัน</div></td><td class="num">฿25,558</td><td class="num">฿0</td><td class="num"><b>0.00x</b></td><td class="num">—</td><td><span class="pill red">หยุด/ลดงบ</span></td></tr><tr><td><span class="dot green"></span></td><td><b>Search - Brand - GlowSerum</b><div class="mute sm">Google</div></td><td class="num">฿21,813</td><td class="num">฿153,568</td><td class="num"><b>7.04x</b></td><td class="num">฿131</td><td><span class="pill green">ขยายงบ</span></td></tr><tr><td><span class="dot green"></span></td><td><b>GlowSerum_Retarget_30D</b><div class="mute sm">Meta</div></td><td class="num">฿21,334</td><td class="num">฿386,568</td><td class="num"><b>18.12x</b></td><td class="num">฿51</td><td><span class="pill green">ขยายงบ</span></td></tr><tr><td><span class="dot red"></span></td><td><b>AcneGel_Engagement_Test</b><div class="mute sm">Meta</div><div class="flags"><span class="flag critical" title="CPA 1,062 สูงกว่ามัธยฐานบัญชี (271) 3.9 เท่า">CPA สูงผิดปกติ</span></div><div class="why sm">CPA 1,062 สูงกว่ามัธยฐานบัญชี (271) 3.9 เท่า</div></td><td class="num">฿16,988</td><td class="num">฿6,241</td><td class="num"><b>0.37x</b></td><td class="num">฿1,062</td><td><span class="pill red">หยุด/ลดงบ</span></td></tr></tbody></table></div>
+</div></section>
+
+<section id="nba"><div class="wrap">
+  <span class="step-no">5 · Next-Best-Action</span><h2>แคมเปญใหม่ที่ควรยิง</h2>
+  <p class="mute">ระบบดูว่าสินค้าไหนยังไม่ได้ยิงในช่องทางไหน แล้วเสนอแคมเปญโดยอิงผลงานของช่องทางนั้นในบัญชี</p>
+  <div class="card" style="margin-top:20px"><h3>ช่องว่าง สินค้า × ช่องทาง</h3><table><thead><tr><th>สินค้า</th><th>ยิงอยู่</th><th>ยังไม่ได้ยิง</th></tr></thead><tbody><tr><td><b>Acne Clear Gel</b></td><td>Meta, TikTok</td><td><span class="chip">Google</span></td></tr><tr><td><b>Night Repair Cream</b></td><td><span class="mute">ยังไม่ได้ยิง</span></td><td><span class="chip">Meta</span> <span class="chip">Google</span> <span class="chip">TikTok</span></td></tr><tr><td><b>Gift Set ปีใหม่ (Serum + Sunscreen)</b></td><td>Meta</td><td><span class="chip">Google</span> <span class="chip">TikTok</span></td></tr></tbody></table></div>
+  <div class="grid3"><div class="card prop"><div class="prop-top"><span class="chip solid" style="background:#2f6bff">Meta</span><span class="prio high">สำคัญสูง</span></div><h3>Night Repair Cream</h3><div class="code sm">NEW_Meta_NightRepairCream</div><dl><dt>เป้าหมาย</dt><dd>Sales (Advantage+ Shopping)</dd><dt>งบต่อวัน</dt><dd>฿2,550</dd><dt>กลุ่มเป้าหมาย</dt><dd>หญิง อายุ 30-50 · ริ้วรอย, anti-aging, การดูแลผิว</dd></dl><div class="sm mute">พาดหัวที่เสนอ</div><ul class="sm hls"><li>“ราคา 1,290 บาท สำหรับผิวที่ต้องการความชุ่มชื้น”</li><li>“แก้ริ้วรอยได้ดี ไม่ต้องกังวลเรื่องวัย”</li><li>“ของขวัญปีใหม่สำหรับผิวที่ต้องการความใส”</li></ul><p class="sm why">ยังไม่ได้ยิง Night Repair Cream บน Meta — ทั้งบัญชี Meta ทำ ROAS เฉลี่ย 5.84 (เป้า 3.0)</p></div><div class="card prop"><div class="prop-top"><span class="chip solid" style="background:#16a34a">Google</span><span class="prio medium">สำคัญกลาง</span></div><h3>Acne Clear Gel</h3><div class="code sm">NEW_Google_AcneClearGel</div><dl><dt>เป้าหมาย</dt><dd>Sales — Search + Performance Max</dd><dt>งบต่อวัน</dt><dd>฿2,550</dd><dt>กลุ่มเป้าหมาย</dt><dd>ทั้งหมด อายุ 16-25 · ปัญหาสิว, การดูแลสิว, การใช้ผลิตภัณฑ์สำหรับวัยรุ่น</dd></dl><div class="sm mute">พาดหัวที่เสนอ</div><ul class="sm hls"><li>“Acne Clear Gel ราคา 390 บาท”</li><li>“ทำความรู้จัก Acne Clear Gel”</li><li>“ลูกค้ารีวิว Acne Clear Gel”</li></ul><p class="sm why">ยังไม่ได้ยิง Acne Clear Gel บน Google — ทั้งบัญชี Google ทำ ROAS เฉลี่ย 2.23 (เป้า 3.0); ช่องทางที่ดีที่สุดคือ Meta ROAS 5.84. แนวครีเอทีฟ: สร้างความเชื่อมั่นด้วยการใช้ผลิตภัณฑ์ที่ออกแบบมาเพื่อแก้ปัญหาสิวให้ผู้ใช้ในวัยรุ่นได้รับผิวที่สะอาดและไม่ต้องกังวลเรื่องสิว</p></div><div class="card prop"><div class="prop-top"><span class="chip solid" style="background:#16a34a">Google</span><span class="prio medium">สำคัญกลาง</span></div><h3>Gift Set ปีใหม่ (Serum + Sunscreen)</h3><div class="code sm">NEW_Google_GiftSetปใหมSerumSunscreen</div><dl><dt>เป้าหมาย</dt><dd>Sales — Search + Performance Max</dd><dt>งบต่อวัน</dt><dd>฿2,550</dd><dt>กลุ่มเป้าหมาย</dt><dd>ชาย อายุ 25-44 · ของขวัญปีใหม่, การดูแลผิว, การเตรียมตัวสำหรับเทศกาล</dd></dl><div class="sm mute">พาดหัวที่เสนอ</div><ul class="sm hls"><li>“Gift Set ปีใหม่ ราคา 1,190 บาท”</li><li>“ทำความรู้จัก Gift Set ปีใหม่”</li><li>“ลูกค้ารีวิว Gift Set ปีใหม่”</li></ul><p class="sm why">ยังไม่ได้ยิง Gift Set ปีใหม่ (Serum + Sunscreen) บน Google — ทั้งบัญชี Google ทำ ROAS เฉลี่ย 2.23 (เป้า 3.0); ช่องทางที่ดีที่สุดคือ Meta ROAS 5.84. แนวครีเอทีฟ: สร้างความเชื่อมั่นด้วยการใช้ผลิตภัณฑ์ที่ออกแบบมาเป็นเซตสำหรับของขวัญปีใหม่ ช่วยให้ผู้ชายที่ต้องการของขวัญที่ดีสำหรับแฟนได้รับผิวที่ใสและมีสุขภาพดี</p></div></div>
+</div></section>
+
+<section id="report"><div class="wrap">
+  <span class="step-no">6 · ผลลัพธ์สุดท้าย</span><h2>รายงานภาพ 1080×1350 พร้อมส่ง</h2>
+  <div class="report"><a href="output/report.png" target="_blank"><img src="output/report.png" alt="รายงานสรุปผลโฆษณาข้ามแพลตฟอร์ม"></a>
+  <div><p>สรุปทั้งบัญชีในภาพเดียว ใช้โพสต์ใน LINE, Slack หรือแนบในอีเมลถึงลูกค้าได้ทันที มีทั้ง KPI หลัก การเทียบแพลตฟอร์ม สถานะของแต่ละแคมเปญพร้อมเหตุผล และแคมเปญใหม่ที่แนะนำ</p>
+  <p class="sm mute">ระบบตรวจว่าเนื้อหาไม่ล้นกรอบ (1080×1350 · ล้นกรอบ 0 จุด) ก่อนแคปเป็น PNG</p>
+  <a class="btn" href="output/report.png" download="ads-report-example.png">ดาวน์โหลด PNG</a><a class="btn ghost" href="output/report.html" target="_blank">เปิดเป็น HTML</a></div></div>
+</div></section>
+
+<section id="files"><div class="wrap">
+  <h2>ไฟล์ทั้งหมดในชุดตัวอย่าง</h2>
+  <div class="grid2"><div class="files"><h3>ข้อมูลเข้า (input/)</h3>
+    <a href="input/meta_ads_export.csv" download><span>meta_ads_export.csv</span><small>Meta · CSV · THB</small></a>
+    <a href="input/google_ads_report.csv" download><span>google_ads_report.csv</span><small>Google · CSV · USD</small></a>
+    <a href="input/tiktok_ads.json" download><span>tiktok_ads.json</span><small>TikTok · JSON · THB</small></a>
+    <a href="input/products.json" download><span>products.json</span><small>รายการสินค้า</small></a></div>
+  <div class="files"><h3>ผลลัพธ์ (output/)</h3>
+    <a href="output/report.png" download><span>report.png</span><small>รายงานภาพ 1080×1350</small></a>
+    <a href="output/report.html" target="_blank"><span>report.html</span><small>รายงานแบบ HTML</small></a>
+    <a href="output/normalized.json" target="_blank"><span>normalized.json</span><small>ข้อมูลรวมหลังทำความสะอาด 140 แถว</small></a>
+    <a href="output/result.json" target="_blank"><span>result.json</span><small>ผลวินิจฉัยและข้อเสนอทั้งหมด</small></a></div></div>
+</div></section>
+<footer><div class="wrap">ข้อมูลจำลองเพื่อสาธิตเท่านั้น ไม่ใช่ข้อมูลของแบรนด์จริง · สร้างจากรัน <code>20261125-222924-361d</code> · สร้างใหม่ได้ด้วย <code>php tools/make_examples.php</code></div></footer>
+</body></html>

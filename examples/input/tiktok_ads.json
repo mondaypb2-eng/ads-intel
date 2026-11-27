@@ -1,0 +1,641 @@
+{
+    "code": 0,
+    "message": "OK",
+    "data": {
+        "page_info": {
+            "total_number": 42
+        },
+        "list": [
+            {
+                "dimensions": {
+                    "campaign_name": "TT_SunScreen_SparkAds_GenZ",
+                    "stat_time_day": "2026-11-01 00:00:00"
+                },
+                "metrics": {
+                    "spend": "2770.9",
+                    "impressions": "46182",
+                    "clicks": "592",
+                    "ctr": "1.28",
+                    "complete_payment": "16",
+                    "total_complete_payment_rate": "7107.84",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_SunScreen_SparkAds_GenZ",
+                    "stat_time_day": "2026-11-02 00:00:00"
+                },
+                "metrics": {
+                    "spend": "2793.1",
+                    "impressions": "46552",
+                    "clicks": "662",
+                    "ctr": "1.42",
+                    "complete_payment": "14",
+                    "total_complete_payment_rate": "6556.73",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_SunScreen_SparkAds_GenZ",
+                    "stat_time_day": "2026-11-03 00:00:00"
+                },
+                "metrics": {
+                    "spend": "2507.5",
+                    "impressions": "41792",
+                    "clicks": "491",
+                    "ctr": "1.17",
+                    "complete_payment": "12",
+                    "total_complete_payment_rate": "5591.97",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_SunScreen_SparkAds_GenZ",
+                    "stat_time_day": "2026-11-04 00:00:00"
+                },
+                "metrics": {
+                    "spend": "2223.1",
+                    "impressions": "37052",
+                    "clicks": "528",
+                    "ctr": "1.43",
+                    "complete_payment": "11",
+                    "total_complete_payment_rate": "5133.15",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_SunScreen_SparkAds_GenZ",
+                    "stat_time_day": "2026-11-05 00:00:00"
+                },
+                "metrics": {
+                    "spend": "2749.6",
+                    "impressions": "45827",
+                    "clicks": "649",
+                    "ctr": "1.42",
+                    "complete_payment": "12",
+                    "total_complete_payment_rate": "5589",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_SunScreen_SparkAds_GenZ",
+                    "stat_time_day": "2026-11-06 00:00:00"
+                },
+                "metrics": {
+                    "spend": "2235.7",
+                    "impressions": "37262",
+                    "clicks": "478",
+                    "ctr": "1.28",
+                    "complete_payment": "9",
+                    "total_complete_payment_rate": "4209.57",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_SunScreen_SparkAds_GenZ",
+                    "stat_time_day": "2026-11-07 00:00:00"
+                },
+                "metrics": {
+                    "spend": "2526.4",
+                    "impressions": "42107",
+                    "clicks": "559",
+                    "ctr": "1.33",
+                    "complete_payment": "12",
+                    "total_complete_payment_rate": "5644.35",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_SunScreen_SparkAds_GenZ",
+                    "stat_time_day": "2026-11-08 00:00:00"
+                },
+                "metrics": {
+                    "spend": "2506",
+                    "impressions": "41767",
+                    "clicks": "552",
+                    "ctr": "1.32",
+                    "complete_payment": "13",
+                    "total_complete_payment_rate": "5900.6",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_SunScreen_SparkAds_GenZ",
+                    "stat_time_day": "2026-11-09 00:00:00"
+                },
+                "metrics": {
+                    "spend": "2273.8",
+                    "impressions": "37897",
+                    "clicks": "471",
+                    "ctr": "1.24",
+                    "complete_payment": "12",
+                    "total_complete_payment_rate": "5165.37",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_SunScreen_SparkAds_GenZ",
+                    "stat_time_day": "2026-11-10 00:00:00"
+                },
+                "metrics": {
+                    "spend": "2662.6",
+                    "impressions": "44377",
+                    "clicks": "622",
+                    "ctr": "1.4",
+                    "complete_payment": "16",
+                    "total_complete_payment_rate": "7407.36",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_SunScreen_SparkAds_GenZ",
+                    "stat_time_day": "2026-11-11 00:00:00"
+                },
+                "metrics": {
+                    "spend": "2219.8",
+                    "impressions": "36997",
+                    "clicks": "468",
+                    "ctr": "1.26",
+                    "complete_payment": "11",
+                    "total_complete_payment_rate": "5001.48",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_SunScreen_SparkAds_GenZ",
+                    "stat_time_day": "2026-11-12 00:00:00"
+                },
+                "metrics": {
+                    "spend": "2322.4",
+                    "impressions": "38707",
+                    "clicks": "513",
+                    "ctr": "1.33",
+                    "complete_payment": "11",
+                    "total_complete_payment_rate": "5104.44",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_SunScreen_SparkAds_GenZ",
+                    "stat_time_day": "2026-11-13 00:00:00"
+                },
+                "metrics": {
+                    "spend": "2361.4",
+                    "impressions": "39357",
+                    "clicks": "484",
+                    "ctr": "1.23",
+                    "complete_payment": "12",
+                    "total_complete_payment_rate": "5557.95",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_SunScreen_SparkAds_GenZ",
+                    "stat_time_day": "2026-11-14 00:00:00"
+                },
+                "metrics": {
+                    "spend": "2493.4",
+                    "impressions": "41557",
+                    "clicks": "529",
+                    "ctr": "1.27",
+                    "complete_payment": "11",
+                    "total_complete_payment_rate": "4876.99",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_GlowSerum_VSA_Shop",
+                    "stat_time_day": "2026-11-01 00:00:00"
+                },
+                "metrics": {
+                    "spend": "3325.57",
+                    "impressions": "55426",
+                    "clicks": "600",
+                    "ctr": "1.08",
+                    "complete_payment": "13",
+                    "total_complete_payment_rate": "11296.99",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_GlowSerum_VSA_Shop",
+                    "stat_time_day": "2026-11-02 00:00:00"
+                },
+                "metrics": {
+                    "spend": "3583.62",
+                    "impressions": "59727",
+                    "clicks": "601",
+                    "ctr": "1.01",
+                    "complete_payment": "14",
+                    "total_complete_payment_rate": "12726.88",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_GlowSerum_VSA_Shop",
+                    "stat_time_day": "2026-11-03 00:00:00"
+                },
+                "metrics": {
+                    "spend": "3124.74",
+                    "impressions": "52079",
+                    "clicks": "572",
+                    "ctr": "1.1",
+                    "complete_payment": "10",
+                    "total_complete_payment_rate": "8510.78",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_GlowSerum_VSA_Shop",
+                    "stat_time_day": "2026-11-04 00:00:00"
+                },
+                "metrics": {
+                    "spend": "3425.41",
+                    "impressions": "57090",
+                    "clicks": "563",
+                    "ctr": "0.99",
+                    "complete_payment": "11",
+                    "total_complete_payment_rate": "9313.05",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_GlowSerum_VSA_Shop",
+                    "stat_time_day": "2026-11-05 00:00:00"
+                },
+                "metrics": {
+                    "spend": "3360.9",
+                    "impressions": "56015",
+                    "clicks": "592",
+                    "ctr": "1.06",
+                    "complete_payment": "9",
+                    "total_complete_payment_rate": "8208.58",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_GlowSerum_VSA_Shop",
+                    "stat_time_day": "2026-11-06 00:00:00"
+                },
+                "metrics": {
+                    "spend": "2854.4",
+                    "impressions": "47573",
+                    "clicks": "512",
+                    "ctr": "1.08",
+                    "complete_payment": "9",
+                    "total_complete_payment_rate": "8143.98",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_GlowSerum_VSA_Shop",
+                    "stat_time_day": "2026-11-07 00:00:00"
+                },
+                "metrics": {
+                    "spend": "3293.7",
+                    "impressions": "54895",
+                    "clicks": "586",
+                    "ctr": "1.07",
+                    "complete_payment": "10",
+                    "total_complete_payment_rate": "9068.88",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_GlowSerum_VSA_Shop",
+                    "stat_time_day": "2026-11-08 00:00:00"
+                },
+                "metrics": {
+                    "spend": "3314.82",
+                    "impressions": "55247",
+                    "clicks": "532",
+                    "ctr": "0.96",
+                    "complete_payment": "12",
+                    "total_complete_payment_rate": "10382.06",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_GlowSerum_VSA_Shop",
+                    "stat_time_day": "2026-11-09 00:00:00"
+                },
+                "metrics": {
+                    "spend": "3528.7",
+                    "impressions": "58812",
+                    "clicks": "553",
+                    "ctr": "0.94",
+                    "complete_payment": "12",
+                    "total_complete_payment_rate": "10458.27",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_GlowSerum_VSA_Shop",
+                    "stat_time_day": "2026-11-10 00:00:00"
+                },
+                "metrics": {
+                    "spend": "2959.62",
+                    "impressions": "49327",
+                    "clicks": "522",
+                    "ctr": "1.06",
+                    "complete_payment": "11",
+                    "total_complete_payment_rate": "9406.83",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_GlowSerum_VSA_Shop",
+                    "stat_time_day": "2026-11-11 00:00:00"
+                },
+                "metrics": {
+                    "spend": "3193.47",
+                    "impressions": "53225",
+                    "clicks": "554",
+                    "ctr": "1.04",
+                    "complete_payment": "12",
+                    "total_complete_payment_rate": "10383.1",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_GlowSerum_VSA_Shop",
+                    "stat_time_day": "2026-11-12 00:00:00"
+                },
+                "metrics": {
+                    "spend": "2944.64",
+                    "impressions": "49077",
+                    "clicks": "537",
+                    "ctr": "1.09",
+                    "complete_payment": "10",
+                    "total_complete_payment_rate": "8760.9",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_GlowSerum_VSA_Shop",
+                    "stat_time_day": "2026-11-13 00:00:00"
+                },
+                "metrics": {
+                    "spend": "3284.48",
+                    "impressions": "54741",
+                    "clicks": "543",
+                    "ctr": "0.99",
+                    "complete_payment": "9",
+                    "total_complete_payment_rate": "7449.07",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_GlowSerum_VSA_Shop",
+                    "stat_time_day": "2026-11-14 00:00:00"
+                },
+                "metrics": {
+                    "spend": "3466.88",
+                    "impressions": "57781",
+                    "clicks": "549",
+                    "ctr": "0.95",
+                    "complete_payment": "9",
+                    "total_complete_payment_rate": "7761.1",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_AcneGel_Awareness_TopView",
+                    "stat_time_day": "2026-11-01 00:00:00"
+                },
+                "metrics": {
+                    "spend": "1611.43",
+                    "impressions": "26857",
+                    "clicks": "165",
+                    "ctr": "0.61",
+                    "complete_payment": "0",
+                    "total_complete_payment_rate": "0",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_AcneGel_Awareness_TopView",
+                    "stat_time_day": "2026-11-02 00:00:00"
+                },
+                "metrics": {
+                    "spend": "1935.86",
+                    "impressions": "32264",
+                    "clicks": "179",
+                    "ctr": "0.55",
+                    "complete_payment": "0",
+                    "total_complete_payment_rate": "0",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_AcneGel_Awareness_TopView",
+                    "stat_time_day": "2026-11-03 00:00:00"
+                },
+                "metrics": {
+                    "spend": "1742.76",
+                    "impressions": "29046",
+                    "clicks": "168",
+                    "ctr": "0.58",
+                    "complete_payment": "0",
+                    "total_complete_payment_rate": "0",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_AcneGel_Awareness_TopView",
+                    "stat_time_day": "2026-11-04 00:00:00"
+                },
+                "metrics": {
+                    "spend": "1887.7",
+                    "impressions": "31462",
+                    "clicks": "174",
+                    "ctr": "0.55",
+                    "complete_payment": "0",
+                    "total_complete_payment_rate": "0",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_AcneGel_Awareness_TopView",
+                    "stat_time_day": "2026-11-05 00:00:00"
+                },
+                "metrics": {
+                    "spend": "1733.04",
+                    "impressions": "28884",
+                    "clicks": "188",
+                    "ctr": "0.65",
+                    "complete_payment": "0",
+                    "total_complete_payment_rate": "0",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_AcneGel_Awareness_TopView",
+                    "stat_time_day": "2026-11-06 00:00:00"
+                },
+                "metrics": {
+                    "spend": "1934.35",
+                    "impressions": "32239",
+                    "clicks": "191",
+                    "ctr": "0.59",
+                    "complete_payment": "0",
+                    "total_complete_payment_rate": "0",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_AcneGel_Awareness_TopView",
+                    "stat_time_day": "2026-11-07 00:00:00"
+                },
+                "metrics": {
+                    "spend": "1963.08",
+                    "impressions": "32718",
+                    "clicks": "189",
+                    "ctr": "0.58",
+                    "complete_payment": "0",
+                    "total_complete_payment_rate": "0",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_AcneGel_Awareness_TopView",
+                    "stat_time_day": "2026-11-08 00:00:00"
+                },
+                "metrics": {
+                    "spend": "1631.52",
+                    "impressions": "27192",
+                    "clicks": "165",
+                    "ctr": "0.61",
+                    "complete_payment": "0",
+                    "total_complete_payment_rate": "0",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_AcneGel_Awareness_TopView",
+                    "stat_time_day": "2026-11-09 00:00:00"
+                },
+                "metrics": {
+                    "spend": "1877.54",
+                    "impressions": "31292",
+                    "clicks": "187",
+                    "ctr": "0.6",
+                    "complete_payment": "0",
+                    "total_complete_payment_rate": "0",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_AcneGel_Awareness_TopView",
+                    "stat_time_day": "2026-11-10 00:00:00"
+                },
+                "metrics": {
+                    "spend": "1822.25",
+                    "impressions": "30371",
+                    "clicks": "174",
+                    "ctr": "0.57",
+                    "complete_payment": "0",
+                    "total_complete_payment_rate": "0",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_AcneGel_Awareness_TopView",
+                    "stat_time_day": "2026-11-11 00:00:00"
+                },
+                "metrics": {
+                    "spend": "1997.21",
+                    "impressions": "33287",
+                    "clicks": "193",
+                    "ctr": "0.58",
+                    "complete_payment": "0",
+                    "total_complete_payment_rate": "0",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_AcneGel_Awareness_TopView",
+                    "stat_time_day": "2026-11-12 00:00:00"
+                },
+                "metrics": {
+                    "spend": "1745.57",
+                    "impressions": "29093",
+                    "clicks": "180",
+                    "ctr": "0.62",
+                    "complete_payment": "0",
+                    "total_complete_payment_rate": "0",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_AcneGel_Awareness_TopView",
+                    "stat_time_day": "2026-11-13 00:00:00"
+                },
+                "metrics": {
+                    "spend": "1798.92",
+                    "impressions": "29982",
+                    "clicks": "184",
+                    "ctr": "0.61",
+                    "complete_payment": "0",
+                    "total_complete_payment_rate": "0",
+                    "currency": "THB"
+                }
+            },
+            {
+                "dimensions": {
+                    "campaign_name": "TT_AcneGel_Awareness_TopView",
+                    "stat_time_day": "2026-11-14 00:00:00"
+                },
+                "metrics": {
+                    "spend": "1877.11",
+                    "impressions": "31285",
+                    "clicks": "174",
+                    "ctr": "0.56",
+                    "complete_payment": "0",
+                    "total_complete_payment_rate": "0",
+                    "currency": "THB"
+                }
+            }
+        ]
+    }
+}

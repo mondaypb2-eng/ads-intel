@@ -1,0 +1,46 @@
+Campaign report
+"November 1, 2026 - November 14, 2026"
+Day,Campaign,"Campaign status","Currency code",Cost,Impr.,Clicks,CTR,"Avg. CPC",Conversions,"Conv. value","Cost / conv."
+2026-11-01,"Search - Brand - GlowSerum",Enabled,USD,47.60,"1,911",150,7.85%,$0.32,12.43,333.86,3.83
+2026-11-02,"Search - Brand - GlowSerum",Enabled,USD,50.16,"1,815",156,8.6%,$0.32,12.56,350.60,3.99
+2026-11-03,"Search - Brand - GlowSerum",Enabled,USD,49.56,"1,623",148,9.12%,$0.33,15.23,424.39,3.25
+2026-11-04,"Search - Brand - GlowSerum",Enabled,USD,45.46,"1,313",118,8.99%,$0.39,11.36,303.88,4
+2026-11-05,"Search - Brand - GlowSerum",Enabled,USD,50.06,"1,819",157,8.63%,$0.32,14.12,378.00,3.55
+2026-11-06,"Search - Brand - GlowSerum",Enabled,USD,48.73,"1,494",136,9.1%,$0.36,12.02,323.49,4.05
+2026-11-07,"Search - Brand - GlowSerum",Enabled,USD,40.80,"1,414",113,7.99%,$0.36,8.76,232.71,4.66
+2026-11-08,"Search - Brand - GlowSerum",Enabled,USD,40.83,"1,515",121,7.99%,$0.34,10.94,308.10,3.73
+2026-11-09,"Search - Brand - GlowSerum",Enabled,USD,42.63,"1,395",123,8.82%,$0.35,11.29,296.89,3.78
+2026-11-10,"Search - Brand - GlowSerum",Enabled,USD,46.71,"1,602",143,8.93%,$0.33,13.31,376.12,3.51
+2026-11-11,"Search - Brand - GlowSerum",Enabled,USD,42.11,"1,547",129,8.34%,$0.33,11.25,295.08,3.74
+2026-11-12,"Search - Brand - GlowSerum",Enabled,USD,47.09,"1,492",124,8.31%,$0.38,10,276.97,4.71
+2026-11-13,"Search - Brand - GlowSerum",Enabled,USD,43.65,"1,663",138,8.3%,$0.32,11.79,321.64,3.7
+2026-11-14,"Search - Brand - GlowSerum",Enabled,USD,46.16,"1,527",131,8.58%,$0.35,10.89,294.99,4.24
+2026-11-01,"PMax - Skincare - All Products",Enabled,USD,119.97,"16,680",235,1.41%,$0.51,7.4,158.16,16.21
+2026-11-02,"PMax - Skincare - All Products",Enabled,USD,120.91,"16,548",226,1.37%,$0.54,6.46,132.97,18.72
+2026-11-03,"PMax - Skincare - All Products",Enabled,USD,130.34,"16,747",235,1.4%,$0.55,7.42,154.80,17.57
+2026-11-04,"PMax - Skincare - All Products",Enabled,USD,119.97,"14,357",199,1.39%,$0.6,6.86,142.95,17.49
+2026-11-05,"PMax - Skincare - All Products",Enabled,USD,114.10,"15,260",221,1.45%,$0.52,7.32,148.76,15.59
+2026-11-06,"PMax - Skincare - All Products",Enabled,USD,121.64,"16,398",218,1.33%,$0.56,7.67,164.13,15.86
+2026-11-07,"PMax - Skincare - All Products",Enabled,USD,128.16,"15,613",214,1.37%,$0.6,7.7,168.18,16.64
+2026-11-08,"PMax - Skincare - All Products",Enabled,USD,114.46,"13,062",189,1.45%,$0.61,6.39,129.78,17.91
+2026-11-09,"PMax - Skincare - All Products",Enabled,USD,113.38,"14,430",192,1.33%,$0.59,5.76,124.45,19.68
+2026-11-10,"PMax - Skincare - All Products",Enabled,USD,122.91,"16,370",236,1.44%,$0.52,7.07,152.74,17.38
+2026-11-11,"PMax - Skincare - All Products",Enabled,USD,130.84,"15,908",237,1.49%,$0.55,7.16,152.30,18.27
+2026-11-12,"PMax - Skincare - All Products",Enabled,USD,115.80,"12,926",194,1.5%,$0.6,7.08,152.18,16.36
+2026-11-13,"PMax - Skincare - All Products",Enabled,USD,128.45,"16,698",216,1.29%,$0.59,7.37,152.91,17.43
+2026-11-14,"PMax - Skincare - All Products",Enabled,USD,114.90,"15,125",214,1.41%,$0.54,7.38,155.04,15.57
+2026-11-01,"Search - Generic - Sunscreen",Enabled,USD,62.29,"2,706",111,4.1%,$0.56,5.6,79.19,11.12
+2026-11-02,"Search - Generic - Sunscreen",Enabled,USD,64.05,"2,886",113,3.92%,$0.57,4.72,65.34,13.57
+2026-11-03,"Search - Generic - Sunscreen",Enabled,USD,75.44,"3,146",133,4.23%,$0.57,5.93,81.09,12.72
+2026-11-04,"Search - Generic - Sunscreen",Enabled,USD,67.37,"2,937",117,3.98%,$0.58,4.9,71.25,13.75
+2026-11-05,"Search - Generic - Sunscreen",Enabled,USD,73.51,"2,911",124,4.26%,$0.59,6.27,84.12,11.72
+2026-11-06,"Search - Generic - Sunscreen",Enabled,USD,68.02,"3,289",135,4.1%,$0.5,6.7,92.02,10.15
+2026-11-07,"Search - Generic - Sunscreen",Enabled,USD,75.34,"3,296",140,4.25%,$0.54,6.24,83.11,12.07
+2026-11-08,"Search - Generic - Sunscreen",Enabled,USD,61.61,"2,623",114,4.35%,$0.54,2.01,28.78,30.65
+2026-11-09,"Search - Generic - Sunscreen",Enabled,USD,70.86,"3,366",132,3.92%,$0.54,2,28.47,35.43
+2026-11-10,"Search - Generic - Sunscreen",Enabled,USD,75.76,"3,128",134,4.28%,$0.57,2.16,29.45,35.07
+2026-11-11,"Search - Generic - Sunscreen",Enabled,USD,63.47,"3,028",122,4.03%,$0.52,2.18,29.27,29.11
+2026-11-12,"Search - Generic - Sunscreen",Enabled,USD,64.57,"2,604",108,4.15%,$0.6,1.49,20.35,43.34
+2026-11-13,"Search - Generic - Sunscreen",Enabled,USD,69.12,"2,583",117,4.53%,$0.59,2,29.17,34.56
+2026-11-14,"Search - Generic - Sunscreen",Enabled,USD,64.07,"2,519",108,4.29%,$0.59,1.61,23.50,39.8
+"Total: Account",,,USD,,,,,,,,

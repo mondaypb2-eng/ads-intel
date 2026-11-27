@@ -1,0 +1,52 @@
+{
+    "products": [
+        {
+            "name": "Glow Serum Vitamin C",
+            "price": 890,
+            "margin_pct": 70,
+            "audience": "ผู้หญิง 25-40, ผิวหมองคล้ำ, skincare, beauty",
+            "channels": [
+                "Meta",
+                "Google",
+                "TikTok"
+            ]
+        },
+        {
+            "name": "UV Shield Sunscreen SPF50",
+            "price": 450,
+            "margin_pct": 65,
+            "audience": "วัยรุ่น-วัยทำงาน 18-35, กิจกรรมกลางแจ้ง, ทะเล",
+            "channels": [
+                "Meta",
+                "Google",
+                "TikTok"
+            ]
+        },
+        {
+            "name": "Acne Clear Gel",
+            "price": 390,
+            "margin_pct": 72,
+            "audience": "วัยรุ่น 16-25, ปัญหาสิว",
+            "channels": [
+                "Meta",
+                "TikTok"
+            ]
+        },
+        {
+            "name": "Night Repair Cream",
+            "price": 1290,
+            "margin_pct": 75,
+            "audience": "ผู้หญิง 30-50, ริ้วรอย, anti-aging",
+            "channels": []
+        },
+        {
+            "name": "Gift Set ปีใหม่ (Serum + Sunscreen)",
+            "price": 1190,
+            "margin_pct": 60,
+            "audience": "ซื้อเป็นของขวัญ, ผู้ชายซื้อให้แฟน, เทศกาลปีใหม่",
+            "channels": [
+                "Meta"
+            ]
+        }
+    ]
+}

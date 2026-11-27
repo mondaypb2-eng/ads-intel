@@ -1,0 +1,292 @@
+<meta charset="utf-8">
+<title>Ads Intelligence Overview</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Schibsted+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE work — a technical document for the project owner and anyone they hand it to
+   IDEA a planning office's project dossier: a ruled sheet that shows who does what, step by step
+   PICTURE a two-lane flow: 4 pipeline stations, the top lane = what Claude does, the bottom lane = what code does
+   COLOUR stone ground, black ink, brick for Claude, white panels; night #171513
+   TYPE Schibsted Grotesk (Latin/numbers) + IBM Plex Sans Thai
+   LAYOUT laptop: title + conclusion on the left, key facts on the right, flow full width below; phone: stack, stations stacked vertically */
+:root{color-scheme:light dark;--bg:light-dark(#e7e4df,#171513);--panel:light-dark(#ffffff,#211e1b);--ink:light-dark(#141210,#eeeae4);--mute:light-dark(#5d5750,#a59d93);--rule:light-dark(#cfc9c1,#3a3530);--brick:light-dark(#c8371e,#ff6a4d);--brickbg:light-dark(#f7e3de,#3a1f18);--g:light-dark(#1f7a4a,#5fd39a);--y:light-dark(#a86a00,#f0b84a);--r:light-dark(#c8371e,#ff6a4d)}
+:root[data-theme=light]{color-scheme:light}
+:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 'Schibsted Grotesk','IBM Plex Sans Thai',Tahoma,sans-serif;overflow-x:clip}
+.band{padding-block:clamp(28px,4vw,56px);padding-left:max(5vw,16px,env(safe-area-inset-left,0px));padding-right:max(5vw,16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1180px;margin:0 auto}
+h1{font-size:clamp(32px,4.4vw,48px);line-height:1.15;letter-spacing:-.02em;margin:0 0 14px;font-weight:700}
+h2{font-size:clamp(24px,2.6vw,30px);line-height:1.25;letter-spacing:-.01em;margin:0 0 8px;font-weight:700}
+h3{font-size:18px;margin:22px 0 6px;font-weight:700}
+p{margin:0 0 12px;max-width:72ch}
+.lede{font-size:18px;max-width:62ch}
+.mute{color:var(--mute)}
+.note{border-left:3px solid var(--brick);background:var(--brickbg);padding:10px 14px;margin:14px 0;font-size:15px;max-width:none}
+code{font-family:ui-monospace,Consolas,monospace;font-size:.88em;background:color-mix(in srgb,var(--ink) 8%,transparent);padding:1px 5px;border-radius:4px;overflow-wrap:anywhere}
+.top{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:40px;align-items:start}
+.facts{background:var(--panel);border:1px solid var(--rule);border-radius:10px;padding:6px 20px}
+.facts div{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--rule)}
+.facts div:last-child{border:0}
+.facts b{font-size:22px;white-space:nowrap}
+/* flow */
+.flow{margin-top:34px;background:var(--panel);border:1px solid var(--rule);border-radius:12px;padding:20px;display:grid;grid-template-columns:110px repeat(4,minmax(0,1fr)) 120px;gap:0}
+.flow .lane{font-weight:700;font-size:14px;display:flex;align-items:center;padding-right:10px}
+.flow .lane.ai{color:var(--brick)}
+.st{padding:12px 12px;border-left:1px solid var(--rule)}
+.st.h{border-bottom:2px solid var(--ink);padding-bottom:10px}
+.st.h b{display:block;font-size:17px;line-height:1.3}
+.st.h span{font-size:13px;color:var(--mute)}
+.st.ai{background:var(--brickbg);font-size:14px;line-height:1.5}
+.st.code{font-size:14px;line-height:1.5;border-top:1px solid var(--rule)}
+.io{display:flex;flex-direction:column;justify-content:center;gap:6px;font-size:13px;padding:8px}
+.chip{border:1px solid var(--ink);border-radius:999px;padding:3px 10px;text-align:center;white-space:nowrap;background:var(--panel)}
+.png{border:2px solid var(--ink);aspect-ratio:1080/1350;width:70px;margin:0 auto;display:grid;place-items:center;font-size:12px;font-weight:700;background:repeating-linear-gradient(180deg,var(--ink) 0 20%,transparent 20% 22%,color-mix(in srgb,var(--ink) 15%,transparent) 22% 52%,transparent 52% 54%,color-mix(in srgb,var(--ink) 8%,transparent) 54% 100%)}
+.png span{background:var(--panel);padding:0 4px}
+.legend{display:flex;gap:20px;flex-wrap:wrap;margin-top:12px;font-size:14px}
+.legend i{display:inline-block;width:14px;height:14px;vertical-align:-2px;margin-right:6px;border-radius:3px}
+/* tables */
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--rule);font-size:15px}
+th{text-align:left;font-size:13px;color:var(--mute);font-weight:600;padding:10px 12px;border-bottom:2px solid var(--ink)}
+td{padding:10px 12px;border-bottom:1px solid var(--rule);vertical-align:top}
+td.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.ok{color:var(--g);font-weight:700;white-space:nowrap}
+.warn{color:var(--y);font-weight:700;white-space:nowrap}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:start}
+/* roas scale */
+.scale{display:grid;grid-template-columns:1.5fr 1.5fr 2fr;height:46px;border-radius:8px;overflow:hidden;margin:18px 0 6px;color:#fff;font-weight:700;font-size:14px}
+.scale div{display:flex;align-items:center;padding:0 12px}
+.ticks{display:grid;grid-template-columns:1.5fr 1.5fr 2fr;font-size:13px;color:var(--mute)}
+.ticks span:not(:first-child){border-left:1px solid var(--rule);padding-left:6px}
+/* report map */
+.rmap{display:grid;grid-template-columns:minmax(0,200px) minmax(0,1fr);gap:24px;align-items:start}
+.frame{border:2px solid var(--ink);aspect-ratio:1080/1350;display:grid;font-size:12px}
+.frame div{display:flex;align-items:center;justify-content:center;border-bottom:1px dashed var(--rule);text-align:center;padding:0 4px}
+.frame div:first-child{background:var(--ink);color:var(--bg)}
+ol.steps{padding-left:22px;margin:8px 0}
+ol.steps li{margin-bottom:6px}
+ul{padding-left:20px;margin:8px 0}
+li{margin-bottom:5px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:14px}
+.card{background:var(--panel);border:1px solid var(--rule);border-radius:10px;padding:16px 18px}
+.card b{display:block;margin-bottom:4px}
+.card p{font-size:15px;margin:0}
+hr{border:0;border-top:1px solid var(--rule);margin:0}
+@media(max-width:860px){.top,.two,.rmap{grid-template-columns:minmax(0,1fr);gap:24px}.frame{max-width:200px}
+.flow{grid-template-columns:minmax(0,1fr);padding:14px}.flow .lane,.flow .hd-spacer{display:none}
+.st{border-left:0}.st.h{margin-top:14px}.st.ai::before{content:"Claude: ";font-weight:700;color:var(--brick)}.st.code::before{content:"โค้ด: ";font-weight:700}.io{flex-direction:row;flex-wrap:wrap;justify-content:flex-start}}
+@media(max-width:600px){table{font-size:13px}th,td{padding:7px 6px}.stack thead{display:none}.stack tr{display:grid;padding-block:8px;border-bottom:1px solid var(--rule)}.stack td{display:flex;justify-content:space-between;gap:12px;border:0;padding:3px 6px}.stack td::before{content:attr(data-l);color:var(--mute);font-size:12px;flex:none}}
+</style>
+
+<section class="band">
+<div class="wrap">
+  <div class="top">
+    <div>
+      <h1>Multi-Channel Ads Intelligence: เอกสารอธิบายโจทย์และระบบ</h1>
+      <p class="lede">ระบบรับไฟล์รายงานโฆษณาจาก Meta, Google และ TikTok ที่ใช้ชื่อคอลัมน์ไม่เหมือนกัน แล้วรวมเป็นข้อมูลชุดเดียว บอกว่าแคมเปญไหนควรขยายงบ ควรปรับปรุง หรือควรหยุด เสนอแคมเปญใหม่ จากนั้นสร้างรายงานสรุปขนาด 1080×1350 เป็นไฟล์ PNG ให้ส่งต่อได้ทันที</p>
+      <p class="note"><b>สถานะ:</b> ระบบรันบน XAMPP ที่ <code>http://localhost/ads-intel/</code> และผ่าน Eval ครบ 5/5 ในโหมดกฎ ส่วนที่เรียก Claude ยังไม่ได้ทดสอบด้วย API key จริง ทดสอบแล้วเฉพาะกรณีคีย์ผิด ซึ่งระบบถอยไปใช้กฎได้ถูกต้อง</p>
+    </div>
+    <div class="facts">
+      <div><span>ขั้นตอนใน pipeline</span><b>4</b></div>
+      <div><span>แพลตฟอร์มที่รองรับ</span><b>3 + อื่น ๆ</b></div>
+      <div><span>เคส Eval ที่ผ่าน</span><b>5 / 5</b></div>
+      <div><span>ขนาดรายงาน</span><b>1080×1350</b></div>
+      <div><span>โมเดลเริ่มต้น</span><b style="font-size:16px">claude-opus-5-5</b></div>
+    </div>
+  </div>
+
+  <div class="flow" aria-label="แผนภาพ pipeline สองเลน">
+    <div class="lane hd-spacer"></div>
+    <div class="st h"><b>1 · Normalize</b><span>รวมข้อมูลเป็น schema เดียว</span></div>
+    <div class="st h"><b>2 · Diagnose</b><span>หาความผิดปกติ</span></div>
+    <div class="st h"><b>3 · Next-Best-Action</b><span>เสนอแคมเปญใหม่</span></div>
+    <div class="st h"><b>4 · Visual Report</b><span>HTML → PNG</span></div>
+    <div class="io"><span class="chip">Meta CSV</span><span class="chip">Google CSV</span><span class="chip">TikTok JSON</span></div>
+
+    <div class="lane ai">Claude ทำ</div>
+    <div class="st ai">อ่านหัวคอลัมน์ แล้วบอกว่าคอลัมน์ไหนคือ spend, clicks, revenue ฯลฯ</div>
+    <div class="st ai">อธิบายสาเหตุจากตัวเลขเป็นภาษาไทย และเสนอสิ่งที่ควรทำต่อ</div>
+    <div class="st ai">ออกแบบแคมเปญใหม่ กลุ่มเป้าหมาย และพาดหัว 3 แบบ</div>
+    <div class="st ai">(ถ้าเลือก) เขียน HTML + Tailwind ของรายงาน</div>
+    <div class="io"></div>
+
+    <div class="lane">โค้ดทำ</div>
+    <div class="st code">แปลงตัวเลข แปลงสกุลเงินเป็นบาท คำนวณ ROAS/CPA และตรวจ schema</div>
+    <div class="st code">ใช้กฎตายตัวตัดสินสถานะ เขียว/เหลือง/แดง และหา CPA พุ่งกับ Creative Fatigue</div>
+    <div class="st code">หาว่าสินค้าตัวไหนยังไม่ได้ยิงในช่องทางไหน</div>
+    <div class="st code">ใช้ Edge แบบ headless วัดว่าไม่ล้นกรอบ แล้วแคป PNG</div>
+    <div class="io"><div class="png"><span>PNG</span></div></div>
+  </div>
+  <div class="legend"><span><i style="background:var(--brickbg);border:1px solid var(--brick)"></i>งานที่ใช้ภาษาและวิจารณญาณ ให้ Claude ทำ</span><span><i style="background:var(--panel);border:1px solid var(--ink)"></i>งานที่ต้องแม่นยำและตรวจซ้ำได้ ให้โค้ดทำ</span></div>
+</div>
+</section>
+
+<hr>
+<section class="band"><div class="wrap">
+  <h2>โจทย์ขอ 3 อย่าง และระบบทำได้ครบทุกข้อ</h2>
+  <p class="mute">ตารางนี้เทียบสิ่งที่โจทย์ขอกับสิ่งที่สร้างจริง</p>
+  <div class="scroll"><table class="stack"><thead><tr><th>โจทย์ขอ</th><th>สิ่งที่สร้าง</th><th>สถานะ</th></tr></thead><tbody id="req"></tbody></table></div>
+</div></section>
+
+<section class="band" style="padding-top:0"><div class="wrap two">
+  <div>
+    <h2>คำศัพท์ที่ต้องเข้าใจก่อนอ่านผล</h2>
+    <p class="mute">ทุกตัวคำนวณจากยอดรวมจริง ไม่ได้เอาค่าเฉลี่ยของแต่ละวันมาเฉลี่ยกันอีกที</p>
+    <div class="scroll"><table class="stack"><thead><tr><th>คำ</th><th>สูตร / ความหมาย</th><th>ถ้าหารด้วย 0</th></tr></thead><tbody id="terms"></tbody></table></div>
+  </div>
+  <div>
+    <h2>สถานะแคมเปญตัดสินจาก ROAS และสัญญาณเตือน</h2>
+    <p>ค่าเริ่มต้นคือจุดคุ้มทุน ROAS 1.5 และเป้าหมาย 3.0 ปรับได้ทุกครั้งที่รัน</p>
+    <div class="scale"><div style="background:var(--r)">แดง · หยุด/ลดงบ</div><div style="background:var(--y)">เหลือง · ปรับปรุง</div><div style="background:var(--g)">เขียว · ขยายงบ</div></div>
+    <div class="ticks"><span>ROAS 0</span><span>1.5 (คุ้มทุน)</span><span>3.0 (เป้า) ขึ้นไป</span></div>
+    <ul style="margin-top:16px">
+      <li><b>แดง:</b> ROAS ต่ำกว่าจุดคุ้มทุน หรือใช้งบแล้วไม่มี conversion หรือมีปัญหาระดับวิกฤต</li>
+      <li><b>เขียว:</b> ROAS ถึงเป้า และไม่มีสัญญาณเตือนใดเลย</li>
+      <li><b>เหลือง:</b> ทุกกรณีที่เหลือ เช่น ROAS ถึงเป้าแต่ CTR เริ่มตก ได้เหลืองแทนเขียว</li>
+    </ul>
+    <h3>สัญญาณที่ระบบตรวจ</h3>
+    <ul id="flags"></ul>
+  </div>
+</div></section>
+
+<hr>
+<section class="band"><div class="wrap">
+  <h2>รายละเอียดแต่ละขั้น</h2>
+  <div class="cards" id="stepcards"></div>
+</div></section>
+
+<section class="band" style="padding-top:0"><div class="wrap rmap">
+  <div class="frame" style="grid-template-rows:400fr 290fr 440fr 180fr 40fr"><div>หัว + KPI 4 ช่อง<br>400px</div><div>กราฟแพลตฟอร์ม<br>290px</div><div>แคมเปญ 6 อันดับ<br>440px</div><div>แคมเปญใหม่ 2 อัน<br>180px</div><div>สรุป</div></div>
+  <div>
+    <h2>รายงานภาพถูกออกแบบให้ล้นกรอบไม่ได้</h2>
+    <p>เทมเพลตแบ่งหน้า 1350px เป็น 5 ช่วงที่สูงคงที่ ชื่อแคมเปญที่ยาวเกินจะถูกตัดด้วย "…" และถ้ามีมากกว่า 6 แคมเปญจะเขียนว่า "+ อีก N แคมเปญ" แทนที่จะยืดหน้า</p>
+    <p>ก่อนแคปภาพ ระบบเปิดหน้าใน Edge แบบ headless ขนาด 1080×1350 แล้ววัดสามอย่าง: ความกว้าง/สูงจริงของหน้า, กล่องไหนมีเนื้อหาเกินกล่อง และ Tailwind โหลดสำเร็จไหม ถ้าเลือกให้ Claude ออกแบบ HTML แล้วไม่ผ่านการวัดนี้ ระบบจะใช้เทมเพลตแทนและบันทึกเหตุผลไว้</p>
+    <p class="mute">ทดสอบแล้วว่าตัววัดจับได้ทั้งเนื้อหาที่ล้นในกล่อง (200px ใส่เนื้อหา 600px) และหน้าที่ใหญ่เกินกรอบ (1200×1500)</p>
+  </div>
+</div></section>
+
+<hr>
+<section class="band"><div class="wrap">
+  <h2>ผลการทดสอบ (Eval): ผ่าน 5 จาก 5 เคส</h2>
+  <p class="mute">รันในโหมดกฎ ใช้อัตราแลกเปลี่ยนคงที่ในการทดสอบ (USD 34, EUR 37, SGD 25.5) เพื่อให้คำตอบที่คาดไว้ไม่เปลี่ยนตามค่าตั้งค่า</p>
+  <div class="scroll"><table class="stack"><thead><tr><th>เคส</th><th>สิ่งที่ทดสอบ</th><th>ค่าที่คาดไว้ (บางส่วน)</th><th>ผล</th></tr></thead><tbody id="evals"></tbody></table></div>
+  <p style="margin-top:14px">ทุกเคสตรวจ 3 เกณฑ์ตามโจทย์: ทุกแถวผ่าน schema และไฟล์ JSON ไม่มี NaN/INF · ROAS, CPA และยอดรวมตรงกับค่าที่คำนวณมือ (คลาดได้ไม่เกิน 0.005) · รายงานเรนเดอร์ได้ 1080×1350 พอดีและแคป PNG ได้</p>
+</div></section>
+
+<section class="band" style="padding-top:0"><div class="wrap two">
+  <div>
+    <h2>ผลจากข้อมูลตัวอย่าง</h2>
+    <p class="mute">เป็นข้อมูลจำลองของแบรนด์สกินแคร์ 10 แคมเปญ ช่วง 1–14 พ.ย. 2026 ใช้สาธิตเท่านั้น</p>
+    <div class="scroll"><table><thead><tr><th>แพลตฟอร์ม</th><th style="text-align:right">งบ</th><th style="text-align:right">รายได้</th><th style="text-align:right">ROAS</th></tr></thead><tbody id="plat"></tbody></table></div>
+    <p style="margin-top:12px">ได้สถานะขยายงบ 3, ปรับปรุง 3 และหยุด/ลดงบ 4 แคมเปญ และระบบจับสัญญาณที่ฝังไว้ในข้อมูลได้ครบ: Creative Fatigue ใน <code>SunScreen_Reels_Lookalike</code>, CPA พุ่งช่วงหลังใน <code>Search - Generic - Sunscreen</code> และแคมเปญไม่มี conversion <code>TT_AcneGel_Awareness_TopView</code></p>
+  </div>
+  <div>
+    <h2>วิธีใช้งาน</h2>
+    <ol class="steps">
+      <li>เปิด XAMPP Control Panel แล้วกด Start ที่ <b>Apache</b></li>
+      <li>เข้า <code>http://localhost/ads-intel/</code> (มีทางลัดในโฟลเดอร์ "งาน")</li>
+      <li>ถ้าจะใช้ Claude ให้ไปหน้า <b>ตั้งค่า</b> ใส่ Anthropic API key แล้วกด "ทดสอบการเชื่อมต่อ"</li>
+      <li>อัปโหลดไฟล์ CSV/JSON ได้หลายไฟล์พร้อมกัน หรือติ๊ก "ใช้ข้อมูลตัวอย่าง"</li>
+      <li>แก้รายการสินค้า/บริการ ซึ่งใช้หาแคมเปญใหม่ที่ควรยิง</li>
+      <li>กด "เริ่มวิเคราะห์" แล้วดาวน์โหลด PNG, HTML หรือ JSON จากหน้าผลลัพธ์</li>
+    </ol>
+    <p class="mute">รันจาก command line ได้ด้วย: <code>C:\xampp\php\php.exe tools\eval_cli.php</code> หรือ <code>tools\cli_run.php --ai</code></p>
+  </div>
+</div></section>
+
+<hr>
+<section class="band"><div class="wrap">
+  <h2>สิ่งที่ต้องรู้ก่อนใช้งานจริง</h2>
+  <div class="cards" id="know"></div>
+</div></section>
+
+<section class="band" style="padding-top:0"><div class="wrap">
+  <h2>โครงสร้างไฟล์</h2>
+  <p class="mute">ทุกอย่างอยู่ที่ <code>C:\xampp\htdocs\ads-intel\</code></p>
+  <div class="scroll"><table class="stack"><thead><tr><th>ไฟล์ / โฟลเดอร์</th><th>หน้าที่</th></tr></thead><tbody id="files"></tbody></table></div>
+</div></section>
+
+<script>
+{
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fill=(id,rows,heads,raw)=>{document.getElementById(id).innerHTML=rows.map(r=>'<tr>'+r.map((c,i)=>`<td data-l="${esc(heads[i])}"${raw&&raw[i]==='n'?' class="n"':''}>${raw&&raw[i]==='h'?c:esc(c)}</td>`).join('')+'</tr>').join('')};
+
+fill('req',[
+ ['เป้าหมาย: ดึงข้อมูลจาก Meta / Google / TikTok แล้ววิเคราะห์เทียบงบ','อัปโหลดได้หลายไฟล์ ทั้ง CSV, JSON (รวม JSON ซ้อนชั้นแบบ TikTok API) และไฟล์ UTF-16 ของ Google','<span class="ok">✓ ทำแล้ว</span>'],
+ ['แนะนำว่าแคมเปญไหนควรยิงต่อ หยุด หรือขยาย','สถานะเขียว/เหลือง/แดง พร้อมคำแนะนำ ขยายงบ / ปรับปรุง / หยุด','<span class="ok">✓ ทำแล้ว</span>'],
+ ['Prompt 1 · Data Normalization','prompts/1_normalize.md ใช้ structured output บังคับให้เลือกได้เฉพาะชื่อคอลัมน์ที่มีจริง','<span class="ok">✓ ทำแล้ว</span>'],
+ ['Prompt 2 · Diagnostic & Anomaly (CPA พุ่ง, Creative Fatigue)','prompts/2_diagnose.md ส่วนการตรวจจับใช้กฎใน Diagnostics.php','<span class="ok">✓ ทำแล้ว</span>'],
+ ['Prompt 3 · Next-Best-Action','prompts/3_next_best_action.md เสนอแคมเปญ กลุ่มเป้าหมาย และพาดหัว','<span class="ok">✓ ทำแล้ว</span>'],
+ ['Prompt 4 · Visual Report HTML + Tailwind 1080×1350 → PNG','prompts/4_visual_report.md + เทมเพลตสำรอง ใช้ Edge แบบ headless แทน Puppeteer/Playwright','<span class="ok">✓ ทำแล้ว</span>'],
+ ['Eval: Missing, สกุลเงินปน, ยอดขาย 0','5 เคส ตรวจ schema, ตัวเลข และการเรนเดอร์ ดูได้ที่หน้า Eval','<span class="ok">✓ 5/5</span>'],
+ ['ทำงานร่วมกับ Claude จริง','โค้ดเสร็จแล้วและเชื่อมต่อ API ได้ แต่ยังไม่มีคีย์ทดสอบ','<span class="warn">รอ API key</span>']
+],['โจทย์ขอ','สิ่งที่สร้าง','สถานะ'],[0,0,'h']);
+
+fill('terms',[
+ ['ROAS','รายได้ ÷ งบ เช่น 3.0 คือจ่าย 1 บาทได้รายได้กลับมา 3 บาท','— (null)'],
+ ['CPA','งบ ÷ จำนวน conversion คือต้นทุนต่อการขาย 1 ครั้ง','— (null)'],
+ ['CTR','คลิก ÷ การแสดงผล × 100 (%)','— (null)'],
+ ['CPC','งบ ÷ คลิก คือต้นทุนต่อคลิก','— (null)'],
+ ['Frequency','จำนวนครั้งเฉลี่ยที่คนหนึ่งคนเห็นโฆษณา (มีเฉพาะ Meta)','—'],
+ ['Schema','รูปแบบข้อมูลกลาง: campaign_name, spend, impressions, clicks, conversions, revenue, roas …','—'],
+ ['Normalization','การแปลงไฟล์หลายรูปแบบให้อยู่ใน schema เดียวกัน','—']
+],['คำ','สูตร / ความหมาย','ถ้าหารด้วย 0']);
+
+document.getElementById('flags').innerHTML=[
+ ['CPA สูงผิดปกติ','CPA สูงกว่ามัธยฐานของบัญชี 1.5 เท่า (เตือน) หรือ 2 เท่า (วิกฤต) ใช้เมื่อมีอย่างน้อย 3 แคมเปญ'],
+ ['CPA พุ่ง','CPA ครึ่งหลังของช่วงเวลาสูงกว่าครึ่งแรก 40% ขึ้นไป หรือช่วงหลังมีการใช้งบแต่ไม่มี conversion เลย'],
+ ['Creative Fatigue','CTR ลดลง 25% ขึ้นไปทั้งที่ยังมีการแสดงผล และ frequency เพิ่มขึ้น (ถ้ามีข้อมูล frequency)'],
+ ['Frequency สูง','คนหนึ่งเห็นโฆษณาเฉลี่ย 4 ครั้งขึ้นไป'],
+ ['ไม่มี conversion','ใช้งบแล้วแต่ยังไม่มีคนซื้อ']
+].map(([a,b])=>`<li><b>${esc(a)}:</b> ${esc(b)}</li>`).join('')+'<li class="mute">สัญญาณที่ดูแนวโน้มต้องมีข้อมูลรายวันอย่างน้อย 4 วัน</li>';
+
+document.getElementById('stepcards').innerHTML=[
+ ['1 · Normalization','Claude ดูหัวคอลัมน์กับ 5 แถวแรกแล้วตอบว่าคอลัมน์ไหนคืออะไร (เลือกได้เฉพาะชื่อที่มีจริง) ถ้าไม่มี Claude จะใช้พจนานุกรมคำพ้องที่รวมหัวคอลัมน์ภาษาไทยไว้ด้วย จากนั้นโค้ดล้างค่า "N/A", "-", "฿1,234", "$12", "1.2K", ปี พ.ศ. แปลงสกุลเงินเป็นบาท แล้วข้ามแถว Total และแถวที่ไม่มีชื่อแคมเปญ'],
+ ['2 · Diagnostic','สถานะกับสัญญาณเตือนมาจากกฎเพื่อให้ผลเหมือนเดิมทุกครั้ง Claude ได้รับตัวเลขที่คำนวณแล้ว และถูกสั่งให้ใช้เฉพาะตัวเลขในข้อมูล แล้วอธิบายสาเหตุ เช่น CTR ตกพร้อม frequency ขึ้นแปลว่าครีเอทีฟล้า ส่วน CPA ขึ้นแต่ CTR คงที่แปลว่าปัญหาน่าจะอยู่ที่ landing page หรือข้อเสนอ'],
+ ['3 · Next-Best-Action','เทียบรายการสินค้ากับช่องทาง Meta/Google/TikTok ที่ยิงอยู่ แล้วเสนอได้ถึง 6 แคมเปญ แต่ละอันมีวัตถุประสงค์ งบต่อวัน (รวมกันไม่เกินราว 30% ของงบเฉลี่ยต่อวัน) กลุ่มเป้าหมาย พาดหัว 3 มุม และเหตุผล'],
+ ['4 · Visual Report','เลือกได้ 2 แบบ: เทมเพลตที่รับประกันไม่ล้นกรอบ หรือให้ Claude ออกแบบ HTML ซึ่งระบบจะตัด script ภายนอกทิ้ง ใส่ Tailwind จากเครื่องเอง และวัดขนาดก่อนใช้ทุกครั้ง แล้วแคป PNG ด้วย Edge แบบ headless']
+].map(([a,b])=>`<div class="card"><b>${esc(a)}</b><p>${esc(b)}</p></div>`).join('');
+
+fill('evals',[
+ ['missing_values','spend ว่าง, "N/A", "-", แถวไม่มีชื่อ','ROAS รวม 4.3333 · CPA 100 · ข้าม 1 แถว','ผ่าน'],
+ ['mixed_currency','USD, THB, € จากสัญลักษณ์, SGD ในไฟล์เดียว','งบรวม 11,200 ฿ · ROAS 3.1384 · CPA 1,400','ผ่าน'],
+ ['zero_sales','งบ 0 และยอดขาย 0','ROAS = 0 · CPA = null · ไม่เกิดการหารศูนย์','ผ่าน'],
+ ['thai_headers','หัวคอลัมน์ไทย, วันที่ 01/11/2569, "1,000.50"','ROAS 4.0 · CPA 125 · วันที่ 2026-11-01','ผ่าน'],
+ ['stress_layout','40 แคมเปญ ชื่อยาว 150 ตัวอักษร ยอดหลักร้อยล้าน','ภาพ 1080×1350 ไม่ล้นกรอบ','ผ่าน']
+],['เคส','สิ่งที่ทดสอบ','ค่าที่คาดไว้ (บางส่วน)','ผล']);
+document.querySelectorAll('#evals td:last-child').forEach(td=>td.classList.add('ok'));
+
+fill('plat',[
+ ['Meta','฿139.4K','฿814.8K','5.84x'],['Google','฿112.0K','฿249.9K','2.23x'],['TikTok','฿105.9K','฿210.7K','1.99x'],['รวม','฿357.3K','฿1.28M','3.57x']
+],['แพลตฟอร์ม','งบ','รายได้','ROAS'],[0,'n','n','n']);
+
+document.getElementById('know').innerHTML=[
+ ['ต้องมี API key ถึงจะใช้ Claude','ถ้าไม่มีคีย์ ระบบยังทำงานครบทุกขั้นด้วยกฎ แต่คำอธิบายจะเป็นแบบเทมเพลต และการ map คอลัมน์จะใช้พจนานุกรม การรันแต่ละครั้งเรียก API ประมาณ "จำนวนไฟล์ + 2" ครั้ง (+1 ถ้าให้ Claude ออกแบบรายงาน)'],
+ ['อัตราแลกเปลี่ยนเป็นค่าสมมติ','USD 34, EUR 37, SGD 25.5, JPY 0.23 บาท ต้องแก้ให้เป็นค่าจริงในหน้าตั้งค่าก่อนใช้กับข้อมูลจริง'],
+ ['ตัวเลขทุกตัวมาจากโค้ด','AI ไม่ได้คำนวณ ROAS/CPA ใดเลย ตัวเลขที่ปรากฏในคำอธิบายของ Claude ก็ถูกสั่งให้ลอกมาจากข้อมูลที่ส่งให้เท่านั้น'],
+ ['วันที่แบบ 05/11/2026 ถูกอ่านเป็นวัน/เดือน','ตามธรรมเนียมไทย ยกเว้นส่วนหลังเกิน 12 ถึงจะสลับ ถ้าไฟล์เป็นแบบอเมริกัน (เดือน/วัน) ควรใช้รูปแบบ YYYY-MM-DD'],
+ ['ค่าว่างถูกนับเป็น 0','และระบบจดไว้ในหัวข้อ "ข้อสังเกตด้านคุณภาพข้อมูล" ทุกครั้ง ควรเปิดดูก่อนสรุปผล'],
+ ['ใช้ Edge แทน Puppeteer/Playwright','ใช้ engine Chromium ตัวเดียวกันและมีในเครื่องอยู่แล้ว ไม่ต้องติดตั้ง Node เพิ่ม ถ้าย้ายเครื่องให้ตั้ง path ของ Edge หรือ Chrome ในหน้าตั้งค่า'],
+ ['ยังไม่ได้ใช้ MySQL','ผลแต่ละรอบเก็บเป็นไฟล์ในโฟลเดอร์ runs/ ถ้าต้องการดูแนวโน้มข้ามหลายรอบหรือให้หลายคนใช้ ค่อยเพิ่ม MySQL ภายหลัง'],
+ ['Apache ต้องเปิดเอง','หลังรีสตาร์ทเครื่อง ให้กด Start Apache ใน XAMPP Control Panel'],
+ ['ความปลอดภัย','API key เก็บใน storage/settings.json ซึ่งเว็บเข้าไม่ได้ (403) และโฟลเดอร์ lib/, tools/, eval/ ก็ถูกบล็อก ระบบนี้ทำไว้ใช้บนเครื่องตัวเอง ไม่ควรเปิดให้คนนอกเข้าถึง']
+].map(([a,b])=>`<div class="card"><b>${esc(a)}</b><p>${esc(b)}</p></div>`).join('');
+
+fill('files',[
+ ['index.php, run.php, view.php','หน้าอัปโหลด → ประมวลผล → หน้าผลลัพธ์'],
+ ['eval.php, prompts.php, history.php, settings.php','หน้า Eval, ดู prompt, ประวัติ และตั้งค่า'],
+ ['prompts/*.md','prompt ทั้ง 4 ขั้น แก้แล้วมีผลในการรันครั้งถัดไปทันที'],
+ ['lib/Normalizer.php · Metrics.php','ขั้นที่ 1 และการคำนวณ metric'],
+ ['lib/Diagnostics.php · NextBestAction.php','ขั้นที่ 2 และ 3'],
+ ['lib/ReportRenderer.php · Renderer.php','ขั้นที่ 4: สร้าง HTML, วัดขนาด และแคป PNG'],
+ ['lib/Claude.php','เรียก Claude Messages API ผ่าน cURL เพราะเครื่องนี้มี PHP 8.0 และไม่มี Composer จึงติดตั้ง SDK ไม่ได้'],
+ ['lib/Evaluator.php · eval/fixtures/','ชุดทดสอบและข้อมูลทดสอบ'],
+ ['samples/','ข้อมูลตัวอย่าง สร้างใหม่ได้ด้วย tools/make_samples.php'],
+ ['runs/<id>/','ผลของแต่ละรอบ: normalized.json, result.json, report.html, report.png'],
+ ['storage/settings.json','API key และค่าตั้งค่า (เว็บเข้าไม่ได้)']
+],['ไฟล์ / โฟลเดอร์','หน้าที่']);
+}
+</script>

@@ -1,0 +1,10 @@
+# Local settings (may contain API keys)
+storage/*
+!storage/.htaccess
+
+# Generated report runs (user ad data)
+runs/*
+!runs/.htaccess
+
+node_modules/
+.env*
